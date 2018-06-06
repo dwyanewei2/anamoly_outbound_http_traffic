@@ -5,15 +5,15 @@ This section gives the details about our proposed method which aims at detecting
 \begin{figure*}[!t]
 \centering
 \includegraphics[width=400pt]{image/sa.png}
-\caption{An overview of our counterfeit fingerprint detection system. Five subsystems are depicted: (1) PCAP data preprocessor subsystem, (2) benign fingerprint constructor subsystem, (3) benign traffic extractor subsystem, (4) referrer correlation graph constructor subsystem, and (5) graph similarity estimator subsystem. The system only takes the PCAP files of outbound HTTP traffics as input. In training phase, subsystem (1) and (2) passively extract the benign fingerprint from an application's outbound HTTP traffic, and subsystem (3) could use fingerprints to classify benign traffic in the testing phase. We note that referrer correlation extraction in the subsystem (4) is a key step, in the sense that if it can extract discriminative features for counterfeit fingerprint detection, the detection in the subsystem (5) is relatively straightforward.}
+\caption{An overview of our counterfeit fingerprint detection system. Five subsystems are depicted: (1) data preprocessor subsystem, (2) fingerprint constructor subsystem, (3) fingerprint matching subsystem, (4) referrer correlation graph constructor subsystem, and (5) graph similarity estimator subsystem. The system only takes the PCAP files of outbound HTTP traffics as input. In training phase, subsystem (1) and (2) passively extract the benign fingerprint from an application's outbound HTTP traffic, and subsystem (3) could use fingerprints to classify benign traffic in the testing phase. We note that referrer correlation extraction in the subsystem (4) is a key step, in the sense that if it can extract discriminative features for counterfeit fingerprint detection, the detection in the subsystem (5) is relatively straightforward.}
 \label{fig:sa}
 \end{figure*}
 
-\subsection{PCAP Data Preprocessor}
+\subsection{Data Preprocessor}
 
-\subsection{Benign Fingerprint Constructor}
+\subsection{Fingerprint Constructor}
 
-\subsection{Benign Traffic Extractor}
+\subsection{Fingerprint Matching Module}
 
 \subsection{Referrer Correlation Graph Constructor}
 
