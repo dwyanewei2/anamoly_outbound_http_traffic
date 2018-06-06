@@ -22,6 +22,8 @@ Malware analyzed in following experiments are malicious behavioral sequences fro
 
 \subsection{Evaluation Metrics}
 
+{\color{red}{Tony, pliz replace malware to fingerprint!!!}}
+
 Essentially, malware clustering is a multiple classification problem aim to identify malware comes from which families. Four well-known metrics for evaluating effectiveness of proposed method are adopted as followings: ``true positive''($TP$) means the number of malware which belong to same malware families. ``False negative''($FN$) is the number of malware which's families are wrongly predicted. Similarly, ``true negative''($TN$) means the number of malware which aren't same families and being viewed as others, while ``false positive''($FP$) is the number of false alarms that other families' malware being detected as the same ones. Based on accumulation of $TP, FN, TN$, and $FP$, one extended metrics ($accuracy$) popularly used in machine learning problems are also adopted here to evaluate proposed method and listed in equations below. Note that the optimal $accuracy$ of $1.0$ means all of malware are successfully classified by proposed approach. 
 
 \begin{eqnarray}
