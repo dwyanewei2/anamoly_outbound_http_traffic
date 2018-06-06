@@ -1,1 +1,34 @@
 \section{Experiment Results}
+
+{\color{red}{Tony, pliz write overview here!!!}}
+
+\subsection{Experimental Settings}
+
+{\color{red}{Tony, pliz write like the followings in this subsection!}}
+
+Malware analyzed in following experiments are malicious behavioral sequences from collected malicious executable files in real world.  In proposed method implementation, collected malware were paresed and information of four major fields in table~\ref{tbl:db_01}. Table~\ref{tbl:db_01} also lists the the number of malware families, the size of gathered data, and operation types in malicious behavioral sequences. 
+
+\begin{table}[]
+\centering
+\caption{Datasets used in this paper's experiments}
+\label{tbl:db_01}
+\begin{tabular}{lllll}
+\\\hline\hline
+ \multicolumn{1}{c|}{Datasets} & \multicolumn{1}{c|}{Operation Type}   & \multicolumn{1}{c|}{Malware Families} &   \multicolumn{1}{c|}{Malware}    \\\hline
+\multicolumn{1}{c|}{Ahmadi et al. \cite{ahmadi2016novel}} & \multicolumn{1}{c|}{API}              & \multicolumn{1}{c|}{4}  &  \multicolumn{1}{c|}{3,829}                  \\\hline
+\multicolumn{1}{c|}{Ki et al. \cite{ki2015novel}} & \multicolumn{1}{c|}{Opcode}            & \multicolumn{1}{c|}{9}  &  \multicolumn{1}{c|}{10,867}                 \\\hline\hline
+\end{tabular}
+\end{table}
+
+\subsection{Evaluation Metrics}
+
+Essentially, malware clustering is a multiple classification problem aim to identify malware comes from which families. Four well-known metrics for evaluating effectiveness of proposed method are adopted as followings: ``true positive''($TP$) means the number of malware which belong to same malware families. ``False negative''($FN$) is the number of malware which's families are wrongly predicted. Similarly, ``true negative''($TN$) means the number of malware which aren't same families and being viewed as others, while ``false positive''($FP$) is the number of false alarms that other families' malware being detected as the same ones. Based on accumulation of $TP, FN, TN$, and $FP$, one extended metrics ($accuracy$) popularly used in machine learning problems are also adopted here to evaluate proposed method and listed in equations below. Note that the optimal $accuracy$ of $1.0$ means all of malware are successfully classified by proposed approach. 
+
+\begin{eqnarray}
+\label{eq:accuracy}
+Accuracy = \frac{TP+TN}{TP+TN+FP+FN}
+\end{eqnarray}
+
+\subsection{Effectiveness Analysis}
+
+{\color{red}{Tony, pliz show your exp graph and table here!!!}}
