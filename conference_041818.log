@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.2.25)  6 JUN 2018 14:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.2.25)  6 JUN 2018 17:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -434,23 +434,28 @@ File: image/sa.png Graphic file (type png)
  <use image/sa.png>
 Package pdftex.def Info: image/sa.png used on input line 7.
 (pdftex.def)             Requested size: 400.0pt x 196.65599pt.
-) (./exp.tex
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 19.
+
+) (./exp.tex [1{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdfte
+x.map}
+
+
+]
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 11.
 
 
-LaTeX Warning: Citation `ahmadi2016novel' on page 1 undefined on input line 18.
+LaTeX Warning: Citation `ahmadi2016novel' on page 2 undefined on input line 18.
 
 
 
-LaTeX Warning: Citation `ki2015novel' on page 1 undefined on input line 19.
+LaTeX Warning: Citation `ki2015novel' on page 2 undefined on input line 19.
 
-) (./conclusion.tex) (./ack.tex) (./conference_041818.bbl [1{/usr/local/texlive
-/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
-
-
-])
+) (./conclusion.tex) (./ack.tex) (./conference_041818.bbl)
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -462,21 +467,19 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[2
-
- <./image/sa.png>] (./conference_041818.aux)
+[2 <./image/sa.png>] (./conference_041818.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 4451 strings out of 492995
- 64897 string characters out of 6132704
- 136524 words of memory out of 5000000
- 7915 multiletter control sequences out of 15000+600000
+ 4453 strings out of 492995
+ 64918 string characters out of 6132704
+ 135550 words of memory out of 5000000
+ 7917 multiletter control sequences out of 15000+600000
  46193 words of font info for 100 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,11n,35p,1586b,302s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 39i,11n,35p,1728b,302s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
 xlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
@@ -484,14 +487,15 @@ live/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texli
 ve/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive
 /2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2
 017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2017
-/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2017/texmf-dis
-t/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/t
-ype1/urw/times/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/t
-imes/utmri8a.pfb>
-Output written on conference_041818.pdf (2 pages, 137907 bytes).
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2017/
+texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2017/texmf-dist
+/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/ty
+pe1/urw/times/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/ti
+mes/utmri8a.pfb>
+Output written on conference_041818.pdf (2 pages, 152711 bytes).
 PDF statistics:
- 55 PDF objects out of 1000 (max. 8388607)
- 38 compressed objects within 1 object stream
+ 59 PDF objects out of 1000 (max. 8388607)
+ 41 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
