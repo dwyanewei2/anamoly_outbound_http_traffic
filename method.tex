@@ -66,6 +66,8 @@ Matching fingerprint we used is an easy comparison in this module \cite{bortolam
 
 \subsection{Referrer Correlation Graph Constructor}
 
+A call graph models a connection between URLs as a directed graph whose vertices, representing the domain name is interconnected through directed edges which have reference correlation. According to fields {\em Domain} and {\em Referrer}, a vertex could be represented as domain name which is extracted from a URL of the field, and an directed edge shows the reference correlation from {\em Referrer} to {\em Domain}. The example directed graph is depicted in figure \ref{fig:ref_graph}. According to \cite{kinable2011malware}, call graphs are formally defined as a directed graph $G$ with vertex $V = V(G)$, representing the domain name, and edge $E = E(G)$, where $E(G) \subseteq V(G) \times V(G) $, in correspondence with the reference correlation.
+
 \begin{figure}[!t]
 \centering
 \includegraphics[width=170pt]{image/ref_graph.png}

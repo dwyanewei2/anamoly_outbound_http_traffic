@@ -33,6 +33,11 @@ N.~Kheir, ``Analyzing http user agent anomalies for malware detection,'' in
   \emph{Data Privacy Management and Autonomous Spontaneous Security}.\hskip 1em
   plus 0.5em minus 0.4em\relax Springer, 2013, pp. 187--200.
 
+\bibitem{kinable2011malware}
+J.~Kinable and O.~Kostakis, ``Malware classification based on call graph
+  clustering,'' \emph{Journal in computer virology}, vol.~7, no.~4, pp.
+  233--245, 2011.
+
 \bibitem{p:Fankhauser11}
 S.~Fankhauser, K.~Riesen, and H.~Bunke, ``Speeding up graph edit distance
   computation through fast bipartite matching,'' in \emph{International
