@@ -13,7 +13,25 @@ This section gives the details about our proposed method which aims at detecting
 
 For most cases of client-side attacking, hackers whose general goal is to steal valuable data before malware connects to C\&C server. As a result, PCAP files, that contain specific network characteristics of an application (e.g., browser) for each host in the enterprise. 
 
-To generate fingerprint for each browser, our approach first extracts various entities from PCAP files. Table~\ref{tbl:log_01} shows 6 heterogeneous fields which can be extracted from each one-line log, including domain ({\em Domain}), destination IP ({\em DstIP}), user-agent ({\em User-agent}), accept language ({\em Accept-Lang}), length ({\em Len}), and constant field ({\em Constant}). The reason for choosing these 6 fields for browser traffic classification can be summarized as followings and fingerprint construction is represented in next subsection.
+%To generate fingerprint for each browser, our approach first extracts various entities from PCAP files. Table~\ref{tbl:log_01} shows 6 heterogeneous fields which can be extracted from each one-line log, including domain ({\em Domain}), destination IP ({\em DstIP}), user-agent ({\em User-agent}), accept language ({\em Accept-Lang}), length ({\em Len}), and constant field ({\em Constant}). The reason for choosing these 6 fields for browser traffic classification can be summarized as followings and fingerprint construction is represented in next subsection. 
+
+%\begin{table}[]
+%\centering
+%\caption{Fields and Values of Database in a PCAP File}
+%\label{tbl:log_01}
+%\begin{tabular}{ll}
+%\hline\hline
+%Field                           & Value for Instance                                               \\\hline
+%{\em Domain}            & yahoo.com.tw                                                      \\
+%{\em DstIP}                & 140.92.88.140                                                     \\
+%{\em User-agent}      & Mozilla/5.0 (Windows NT 6.1; Win64; x64) ...  \\
+%{\em Accept-Lang}   & zh-TW                                                                  \\
+%{\em Len}                   & 1253                                                                     \\
+%{\em Constant}          & If-Modified-Since, Cookie, Connection, ...       \\\hline\hline
+%\end{tabular}
+%\end{table}
+
+To generate fingerprint for each browser, our approach first extracts various entities from PCAP files. Table~\ref{tbl:log_01} shows 4 heterogeneous fields which can be extracted from each one-line log, including domain ({\em Domain}), user-agent ({\em User-agent}), accept language ({\em Accept-Lang}), and referrer ({\em Referrer}). The reason for choosing these 4 fields for browser traffic classification can be summarized as followings and fingerprint construction is represented in next subsection. 
 
 \begin{table}[]
 \centering
@@ -22,26 +40,42 @@ To generate fingerprint for each browser, our approach first extracts various en
 \begin{tabular}{ll}
 \hline\hline
 Field                           & Value for Instance                                               \\\hline
-{\em Domain}            & yahoo.com.tw                                                      \\
-{\em DstIP}                & 140.92.88.140                                                     \\
+{\em Domain}            & www.yongchang-yc.com.tw                              \\
 {\em User-agent}      & Mozilla/5.0 (Windows NT 6.1; Win64; x64) ...  \\
-{\em Accept-Lang}   & zh-TW                                                                  \\
-{\em Len}                   & 1253                                                                     \\
-{\em Constant}          & If-Modified-Since, Cookie, Connection, ...       \\\hline\hline
+{\em Accept-Lang}   & zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7          \\
+{\em Referrer}           & www.yongchang-yc.com.tw                               \\\hline\hline
 \end{tabular}
 \end{table}
 
-In previous research \cite{bortolameotti2017decanter}, Bortolameotti et al. identified two types of HTTP applications (e.g., $browser$ and $background$). This subsection aims to filter logs of a PCAP file according to the {\em User-agent}, because we focus on counterfeit fingerprints of browser network activities. To identify browser activities, the browser flags we defined are "Mozilla", "Opera", "MQQBrowser", "UCWEB",  "NOKIA5700", "Openwave", "Safari", and "Chrome", and which are used for string matching in field {\em User-agent}. Furthermore, in both training and testing phase, an implementation time-slot $t$ is a fixed time window of $T$ minutes, and the filtered logs is passed to the next module after $t$ ends.
+In previous research \cite{bortolameotti2017decanter}, Bortolameotti et al. identified two types of HTTP applications (e.g., $browser$ and $background$). This subsection aims to filter logs of a PCAP file according to the {\em User-agent}, because we focus on counterfeit fingerprints of browser network activities. To identify browser activities, the browser flags we defined are "Mozilla", "Opera", "MQQBrowser", "UCWEB",  "NOKIA5700", "Openwave", "Safari", and "Chrome", and which are used for string matching in field {\em User-agent}. Furthermore, in both training and testing phase, a filtered logs is continuously passed to the next module in the real time.
+
+%Furthermore, in both training and testing phase, an implementation time-slot $t$ is a fixed time window of $T$ minutes, and the filtered logs is passed to the next module after $t$ ends.
 
 \subsection{Fingerprint Constructor}
 
+Single feature (e.g., {\em User-agent}) isn't effective enough to filter normal network activities \cite{bortolameotti2017decanter} \cite{kheir2013analyzing}. Therefore, we consider multiple features such as {\em User-agent} and {\em Accept-Lang} for fingerprint generation, and {\em Domain} and {\em Referrer} would be used for constructing the correlation graph in other subsection. In our assumption, hacker can't be so lucky to guess all parameters of {\em User-agent} and {\em Accept-Lang} at the same time. In this subsection, we denote a set of {\em User-agent} $U = \begin{Bmatrix} u_{1}, & ... & , u_{n} \end{Bmatrix}$, and a set of {\em Accept-Lang} $L = \begin{Bmatrix} l_{1}, & ... & , l_{m} \end{Bmatrix}$ where $\left | U \right | = n$ and $\left | L  \right | = m$. Furthermore, our approach makes fingerprint $f = (u_{i}, l_{j})$ where $i = 1 \sim n$, $j = 1 \sim m$, and $\left | f \right | = n \times m $. Matching testing browser fingerprint to knowns which is trained and stored in database, and we would briefly show the similarity estimation in following module.
+
 \subsection{Fingerprint Matching Module}
+
+Matching fingerprint we used is an easy comparison in this module \cite{bortolameotti2017decanter}. In training phase, we take fingerprints $f_{b_{i}}$ for each browser $b_{i}$. If our approach constantly runs in testing mode, we must obtain other browser $b_{j}$ fingerprints $f_{b_{j}}$. Then, we use edit distance to estimate fingerprint matching result $d(f_{b_{i}}, f_{b_{j}}) $ which is shown as in Equation ~\ref{eq:edit}.
+
+\begin{equation}
+        \label{eq:edit}
+        d(f_{b_{i}}, f_{b_{j}}) = \sum_k \left |  f_{b_{i_{k}}} - f_{b_{j_{k}}} \right |  
+\end{equation}
 
 \subsection{Referrer Correlation Graph Constructor}
 
+\begin{figure}[!t]
+\centering
+\includegraphics[width=170pt]{image/ref_graph.png}
+\caption{An Example of a referrer correlation graph generated from a browser traffic.}
+\label{fig:ref_graph}
+\end{figure}
+
 \subsection{Graph Similarity Estimator}
 
-We denote the graph edit distance between two opcode-component graphs $g_{1}$ and $g_{2}$ as $D(g_{1}, g_{2})$, which is the sum of VertexCost and EdgeCost. In which, VertexCost and EdgeCost indicate the numbers of insertions, deletions and substitutions of vertices and edges, respectively, where determine the minimum amount of distortion for transforming one graph into another graph  \cite{p:Fankhauser11}. Let $g_{1}$ = $(V_{1}, E_{1})$  and $g_{2}$ = $(V_{2}, E_{2})$: $g_{1}$ is the source graph of malware, and $g_{2}$ is the target graph of malware. The graph edit distance between $g_{1}$ and $g_{2}$ is defined as follows:
+We denote the graph edit distance between two referrer correlation graphs $g_{1}$ and $g_{2}$ as $D(g_{1}, g_{2})$, which is the sum of VertexCost and EdgeCost. In which, VertexCost and EdgeCost indicate the numbers of insertions, deletions and substitutions of vertices and edges, respectively, where determine the minimum amount of distortion for transforming one graph into another graph  \cite{p:Fankhauser11}. Let $g_{1}$ = $(V_{1}, E_{1})$  and $g_{2}$ = $(V_{2}, E_{2})$: $g_{1}$ is the source graph, and $g_{2}$ is the target graph. The graph edit distance between $g_{1}$ and $g_{2}$ is defined as follows:
 
 \begin{equation}
         \label{eq:ged}

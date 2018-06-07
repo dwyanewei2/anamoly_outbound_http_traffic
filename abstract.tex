@@ -1,5 +1,7 @@
 \begin{abstract}
 
+We present DECANTeR, a system to detect anomalous outbound HTTP communication, which passively extracts  fingerprints for each application running on a monitored host. The goal of our system is to detect unknown malware and backdoor communication indicated by unknown  fingerprints extracted from a host’s network traffic. We evaluate a prototype with realistic data from an international organization and datasets composed of malicious traffic. We show that our system achieves a false positive rate of 0.9\% for 441 monitored host machines, an average detection rate of 97.7\%, and that it cannot be evaded by malware using simple evasion techniques such as using known browser user agent values. We compare our solution with DUMONT [24], the current state-of-the-art IDS which detects HTTP covert communication channels by focusing on benign HTTP traffic. The results show that DECANTeR outperforms DUMONT in terms of detection rate, false positive rate, and even evasion-resistance. Finally, DECANTeR detects 96.8\% of information stealers in our dataset, which shows its potential to detect data exfiltration.
+
 \end{abstract}
 
 \begin{IEEEkeywords}

@@ -28,6 +28,11 @@ R.~Bortolameotti, T.~van Ede, M.~Caselli, M.~H. Everts, P.~Hartel, R.~Hofstede,
   33rd Annual Computer Security Applications Conference}.\hskip 1em plus 0.5em
   minus 0.4em\relax ACM, 2017, pp. 373--386.
 
+\bibitem{kheir2013analyzing}
+N.~Kheir, ``Analyzing http user agent anomalies for malware detection,'' in
+  \emph{Data Privacy Management and Autonomous Spontaneous Security}.\hskip 1em
+  plus 0.5em minus 0.4em\relax Springer, 2013, pp. 187--200.
+
 \bibitem{p:Fankhauser11}
 S.~Fankhauser, K.~Riesen, and H.~Bunke, ``Speeding up graph edit distance
   computation through fast bipartite matching,'' in \emph{International
