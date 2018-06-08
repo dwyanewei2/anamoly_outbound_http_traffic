@@ -1,24 +1,20 @@
 \section{Experiment Results}
 
-{\color{red}{Tony, pliz write overview here!!!}}
+{\color{red}{Tony, pliz write overview here!!!}} \\
+In this section, we would describe the datasets that we used to perform our experiments. For performing our experiments we have used two different datasets, simulated data and real-world data. We use simulated data to evaluate the detection performance of our system and compare with DECANTeR. \\
+
 
 \subsection{Experimental Settings}
 
-{\color{red}{Tony, pliz write like the followings in this subsection!}}
+{\color{red}{Tony, pliz write like the followings in this subsection!}}\\
+
+\subsubsection{simulated data} 
+We build a botnet malware and monitor its HTTP outbound. As we know, early botnets generally used Internet Relay Chat (IRC) channel to communicate C\&C server. In recent years, botnets also start to communicate C\&C server through HTTP protocol. Moreover, we need to build a botnet with the spoofing headers which can evade other detection systems. That is why we collect three different simulated botnets traffic. For dataset\_01 is the botnet without spoofing headers. We collect the Infected host's HTTP outbound traffic .The Dataset\_02 consists of the botnet traffic with simple spoofing. It means that our botnet sends the requests to web-like user agent through HTTP protocol. And the dataset\_03 is totally modifying the headers information. The malware can detect which browser is used by the user, and fills the User-Agent with that specific browser. Moreover, it also fills up some common requests header fields, like Accept, Accept-Encoding, Accept-Language, Referer. The datasets information is in table~\ref{tbl:db_01}.
+
+\subsubsection{real-world data}
 
 Malware analyzed in following experiments are malicious behavioral sequences from collected malicious executable files in real world.  In proposed method implementation, collected malware were paresed and information of four major fields in table~\ref{tbl:db_01}. Table~\ref{tbl:db_01} also lists the the number of malware families, the size of gathered data, and operation types in malicious behavioral sequences. 
 
-\begin{table}[]
-\centering
-\caption{Datasets used in this paper's experiments}
-\label{tbl:db_01}
-\begin{tabular}{lllll}
-\\\hline\hline
- \multicolumn{1}{c|}{Datasets} & \multicolumn{1}{c|}{Operation Type}   & \multicolumn{1}{c|}{Malware Families} &   \multicolumn{1}{c|}{Malware}    \\\hline
-\multicolumn{1}{c|}{Ahmadi et al. \cite{ahmadi2016novel}} & \multicolumn{1}{c|}{API}              & \multicolumn{1}{c|}{4}  &  \multicolumn{1}{c|}{3,829}                  \\\hline
-\multicolumn{1}{c|}{Ki et al. \cite{ki2015novel}} & \multicolumn{1}{c|}{Opcode}            & \multicolumn{1}{c|}{9}  &  \multicolumn{1}{c|}{10,867}                 \\\hline\hline
-\end{tabular}
-\end{table}
 
 \subsection{Evaluation Metrics}
 
@@ -33,6 +29,22 @@ Accuracy = \frac{TP+TN}{TP+TN+FP+FN}
 
 \subsection{Effectiveness Analysis}
 
-{\color{red}{Tony, pliz show your exp graph and table here!!!}}
+{\color{red}{Tony, pliz show your exp graph and table here!!!}}\\
+
+\begin{table}[]
+\centering
+\caption{Simulated Data}
+\label{tbl:db_01}
+\begin{tabular}{|c|c|c|c|}
+\hline\hline
+Dataset                    & Dataset    & HTTP Requests        & Performance \\ \hline
+\multirow{2}{*}{Dataset\_01}  & Decanter   & \multirow{2}{*}{220} & 100\%       \\ \cline{2-2} \cline{4-4} 
+                           & Our System &                      & 100\%       \\ \hline
+\multirow{2}{*}{Dataset\_02} & Decanter   & \multirow{2}{*}{216} & 100\%       \\ \cline{2-2} \cline{4-4} 
+                           & Our System &                      & 100\%       \\ \hline
+\multirow{2}{*}{Dataset\_03} & Decanter   & \multirow{2}{*}{216} & 0\%         \\ \cline{2-2} \cline{4-4} 
+                           & Our System &                      & 100\%       \\ \hline\hline
+\end{tabular}
+\end{table}
 
 \subsection{Limitation and Future Work}
