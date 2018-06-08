@@ -4,6 +4,14 @@ Nowadays, malware usually uses HTTP protocol to connect suspicious host for data
 
 The main idea concept of fingerprint is around the HTTP headers. But, as we know, hacker can use exploit tool or library to eaily modify the contents of a HTTP header. Previous research also indicates that malware uses modified HTTP header to evade the latest detections system \cite{grill2014malware}, and which points out most malware using browser-like user-agent since browser's connection behavior is various and complex. Therefore, we represent the problem define as following:
 
+\begin{itemize}
+
+\item {\bf Problem Definition}
+
+To evade intrusion detections, malware could make counterfeit fingerprint (e.g., user-agent, accept language, and so on) in a HTTP header. But, referrer correlation (e.g., domain and referrer fields of HTTP header) usually is fixed when browser connects common domain, therefore, correlation would be changed when malware connects C\&C server even using fake HTTP header. The detail is shown as Figure ~\ref{fig:length_count}.
+
+\end{itemize}
+
 \begin{figure}[!t]
 \centering
 \includegraphics[width=250pt]{image/attack.png}
@@ -21,7 +29,7 @@ The main idea concept of fingerprint is around the HTTP headers. But, as we know
 \label{fig:length_count}
 \end{figure}
 
-Contributions of this work are briefly summarized as followings.
+To resolve this problem, we propose an approach based on deviation estimating when given referrer correlation graphs in training and testing phases, and the contributions of this work are briefly summarized as followings:
 
 \begin{itemize}
 
@@ -38,3 +46,5 @@ Description here...
 Description here...
 
 \end{itemize}
+
+In the remaining parts of this report, Section 2 surveys related work, and Section 3 describes the detail components of the proposed approach. The effectiveness, performance, and case studies of the proposed framework are evaluated and discussed in Section 4. At last, Section 5 concludes this project.
