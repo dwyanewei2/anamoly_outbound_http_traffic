@@ -21,11 +21,6 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
-\bibitem{kheir2013analyzing}
-N.~Kheir, ``Analyzing http user agent anomalies for malware detection,'' in
-  \emph{Data Privacy Management and Autonomous Spontaneous Security}.\hskip 1em
-  plus 0.5em minus 0.4em\relax Springer, 2013, pp. 187--200.
-
 \bibitem{gu2008botsniffer}
 G.~Gu, J.~Zhang, and W.~Lee, ``Botsniffer: Detecting botnet command and control
   channels in network traffic,'' 2008.
@@ -36,6 +31,17 @@ R.~Bortolameotti, T.~van Ede, M.~Caselli, M.~H. Everts, P.~Hartel, R.~Hofstede,
   traffic by passive application fingerprinting,'' in \emph{Proceedings of the
   33rd Annual Computer Security Applications Conference}.\hskip 1em plus 0.5em
   minus 0.4em\relax ACM, 2017, pp. 373--386.
+
+\bibitem{grill2014malware}
+M.~Grill and M.~Reh{\'a}k, ``Malware detection using http user-agent
+  discrepancy identification,'' in \emph{Information Forensics and Security
+  (WIFS), 2014 IEEE International Workshop on}.\hskip 1em plus 0.5em minus
+  0.4em\relax IEEE, 2014, pp. 221--226.
+
+\bibitem{kheir2013analyzing}
+N.~Kheir, ``Analyzing http user agent anomalies for malware detection,'' in
+  \emph{Data Privacy Management and Autonomous Spontaneous Security}.\hskip 1em
+  plus 0.5em minus 0.4em\relax Springer, 2013, pp. 187--200.
 
 \bibitem{kinable2011malware}
 J.~Kinable and O.~Kostakis, ``Malware classification based on call graph

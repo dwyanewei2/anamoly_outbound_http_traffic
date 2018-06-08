@@ -16,45 +16,45 @@ Warning--I didn't find a database entry for "ki2015novel"
 Warning--empty journal in gu2008botsniffer
 
 Done.
-You've used 4 entries,
+You've used 5 entries,
             4087 wiz_defined-function locations,
-            847 strings with 8168 characters,
-and the built_in function-call counts, 3324 in all, are:
-= -- 248
-> -- 83
-< -- 29
-+ -- 46
-- -- 14
-* -- 170
-:= -- 485
-add.period$ -- 10
-call.type$ -- 4
-change.case$ -- 4
-chr.to.int$ -- 72
-cite$ -- 5
-duplicate$ -- 228
-empty$ -- 269
-format.name$ -- 17
-if$ -- 761
+            854 strings with 8379 characters,
+and the built_in function-call counts, 4210 in all, are:
+= -- 317
+> -- 100
+< -- 38
++ -- 56
+- -- 16
+* -- 210
+:= -- 605
+add.period$ -- 13
+call.type$ -- 5
+change.case$ -- 5
+chr.to.int$ -- 96
+cite$ -- 6
+duplicate$ -- 289
+empty$ -- 350
+format.name$ -- 20
+if$ -- 975
 int.to.chr$ -- 0
-int.to.str$ -- 4
-missing$ -- 38
-newline$ -- 35
-num.names$ -- 4
-pop$ -- 97
+int.to.str$ -- 5
+missing$ -- 47
+newline$ -- 38
+num.names$ -- 5
+pop$ -- 120
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 247
+skip$ -- 316
 stack$ -- 0
-substring$ -- 172
-swap$ -- 185
-text.length$ -- 5
+substring$ -- 229
+swap$ -- 235
+text.length$ -- 6
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 4
+type$ -- 5
 warning$ -- 1
-while$ -- 16
-width$ -- 5
-write$ -- 58
+while$ -- 21
+width$ -- 6
+write$ -- 67
 (There were 3 warnings)
