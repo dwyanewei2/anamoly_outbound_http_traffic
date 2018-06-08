@@ -21,6 +21,15 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
+\bibitem{kheir2013analyzing}
+N.~Kheir, ``Analyzing http user agent anomalies for malware detection,'' in
+  \emph{Data Privacy Management and Autonomous Spontaneous Security}.\hskip 1em
+  plus 0.5em minus 0.4em\relax Springer, 2013, pp. 187--200.
+
+\bibitem{gu2008botsniffer}
+G.~Gu, J.~Zhang, and W.~Lee, ``Botsniffer: Detecting botnet command and control
+  channels in network traffic,'' 2008.
+
 \bibitem{bortolameotti2017decanter}
 R.~Bortolameotti, T.~van Ede, M.~Caselli, M.~H. Everts, P.~Hartel, R.~Hofstede,
   W.~Jonker, and A.~Peter, ``Decanter: Detection of anomalous outbound http
@@ -28,38 +37,9 @@ R.~Bortolameotti, T.~van Ede, M.~Caselli, M.~H. Everts, P.~Hartel, R.~Hofstede,
   33rd Annual Computer Security Applications Conference}.\hskip 1em plus 0.5em
   minus 0.4em\relax ACM, 2017, pp. 373--386.
 
-\bibitem{kheir2013analyzing}
-N.~Kheir, ``Analyzing http user agent anomalies for malware detection,'' in
-  \emph{Data Privacy Management and Autonomous Spontaneous Security}.\hskip 1em
-  plus 0.5em minus 0.4em\relax Springer, 2013, pp. 187--200.
-
 \bibitem{kinable2011malware}
 J.~Kinable and O.~Kostakis, ``Malware classification based on call graph
   clustering,'' \emph{Journal in computer virology}, vol.~7, no.~4, pp.
   233--245, 2011.
-
-\bibitem{p:Fankhauser11}
-S.~Fankhauser, K.~Riesen, and H.~Bunke, ``Speeding up graph edit distance
-  computation through fast bipartite matching,'' in \emph{International
-  Workshop on Graph-Based Representations in Pattern Recognition}.\hskip 1em
-  plus 0.5em minus 0.4em\relax Springer, 2011, pp. 102--111.
-
-\bibitem{p:Riesen09}
-K.~Riesen and H.~Bunke, ``Approximate graph edit distance computation by means
-  of bipartite graph matching,'' \emph{Image and Vision computing}, vol.~27,
-  no.~7, pp. 950--959, 2009.
-
-\bibitem{p:Serratosa14}
-F.~Serratosa, ``Fast computation of bipartite graph matching,'' \emph{Pattern
-  Recognition Letters}, vol.~45, pp. 244--250, 2014.
-
-\bibitem{p:Munkres57}
-J.~Munkres, ``Algorithms for the assignment and transportation problems,''
-  \emph{Journal of the society for industrial and applied mathematics}, vol.~5,
-  no.~1, pp. 32--38, 1957.
-
-\bibitem{p:Kuhn56}
-H.~W. Kuhn, ``Variants of the hungarian method for assignment problems,''
-  \emph{Naval Research Logistics (NRL)}, vol.~3, no.~4, pp. 253--258, 1956.
 
 \end{thebibliography}

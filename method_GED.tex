@@ -75,45 +75,56 @@ A call graph models a connection between URLs as a directed graph whose vertices
 \label{fig:ref_graph}
 \end{figure}
 
-A candidate set $S = \{st_1, st_2, ..., st_{ns}\}$ that contains all domain names filtered by fingerprint matching module and derived from $D_i$. Note that $ns$ is the total number of derived domain names in $D_i$. Given the dataset $D_i$ containing $i^{th}$ domain name; $i=1,...,ns$, and its referrer correlation based on the dataset should includes an $1 \times ns$ adjacency vector ($ADJ$), as following:
-
-\begin{equation*}
-\begin{split}
-ADJ(i) = 
-\left[
-\begin{array}{ccccc}
-tp_{i,1} & \ldots & tp_{i,j} & \ldots & tp_{i,ns}\\
-\end{array}
-\right]
-\end{split}
-\end{equation*}
-
-where for each $i$ and $j$, $tp_{i,j}$ represents a directed edge which is referrer correlation from $j^{th}$ domain name to $i^{th}$ candidate domain.
-
-\begin{equation*}
-\begin{array}{ll}
-\forall\mbox{ }i,j=1,...,ns, &\\ 
-tp_{i,j} = \mbox{\#connections from }\mbox{$st_j$}\mbox{ to }\mbox{$st_i$}\mbox{ in }\mbox{$D_i$}			 
-\end{array}
-\end{equation*}
-
 \subsection{Graph Similarity Estimator}
 
-Our proposed approach relies on appropriate estimating deviation from domain name's new referrer correlation to its benign one. In this paper, domain name's referrer correlation is summarized as patterns represented by adjacency vector, as a result, deviation measuring can be realized by using graph edit distance (GED) to quantify similarity (or dissimilarity) between different vectors.   
-The formal graph edit distance between two graphs $G_{1}$ and $G_{2}$, written as $GED(G_{1},G_{2})$ can be defined as following:
+We denote the graph edit distance between two referrer correlation graphs $g_{1}$ and $g_{2}$ as $D(g_{1}, g_{2})$, which is the sum of VertexCost and EdgeCost. In which, VertexCost and EdgeCost indicate the numbers of insertions, deletions and substitutions of vertices and edges, respectively, where determine the minimum amount of distortion for transforming one graph into another graph  \cite{p:Fankhauser11}. Let $g_{1}$ = $(V_{1}, E_{1})$  and $g_{2}$ = $(V_{2}, E_{2})$: $g_{1}$ is the source graph, and $g_{2}$ is the target graph. The graph edit distance between $g_{1}$ and $g_{2}$ is defined as follows:
 
 \begin{equation}
-GED(G_{1},G_{2}) = \min\limits_{(e_{1},...,e_{k}) \in P(G_{1}, G_{2})}\sum\limits_{i=1}^{k}cost(e_{i}),
-\label{equ:ged_idea}
-\end{equation} 
-
-where $P(G_{1}, G_{2})$ denotes the universal set of editing paths isomorphically transforming $G_{1}$ into $G_{2}$, and $cost(e_{i})$ is the cost of each graph editing operation, $e_{i}$.
-
-With respect to referrer correlation graph in our method, calculation of GED on two graphs can then be implemented by following equation (\ref{equ:ged_implementation}): 
-
-\begin{equation}
-GED(ADJ(a), ADJ(b)) = \sum\limits_{j=1}^{ns}\left|tp_{a,j} - tp_{b,j}\right|,
-\label{equ:ged_implementation}
+        \label{eq:ged}
+        D(g_{1}, g_{2}) = \mathbf{VertexCost} + \mathbf{EdgeCost}
 \end{equation}
 
-where $ADJ(a)$ and $ADJ(b)$ are adjacency vectors of two referrer correlation graphs, as well as $tp_{a,j}$ and $tp_{b,j}$ are the corresponding references in $ADJ(a)$ and $ADJ(b)$, respectively. The $ns$ is the number of candidate domain names after fingerprint matching.
+\begin{equation}
+        \label{eq:cost_all1}
+\sigma (g_{1},g_{2}) = \frac{D(g_{1}, g_{2})}{\left | V(g_{1}) \right | + \left | V(g_{2}) \right | +\left | E(g_{1}) \right | + \left | E(g_{2}) \right |}
+\end{equation}
+
+Finally, the similarity $\sigma (g_{1},g_{2}) $ of two graphs $g_{1}$ and $g_{2}$ is obtained from the graph edit distance $D(g_{1}, g_{2})$. The details are described in Equation~\ref{eq:cost_all1}, which is a real value on the interval [0,1], where 0 indicates that graphs $g_{1}$ and $g_{2}$ are identical, whereas a value near 1 implies that the pair is highly dissimilar. As mentioned before, finding the minimum graph edit distance, i.e., $min_{D(g_{1}, g_{2})}$, is an NP-hard problem but can be approximated. Riesen et al. and  Francesc Serratosa introduced an approximation algorithm with a good trade-off between accuracy and speed \cite{p:Riesen09} \cite{p:Serratosa14}. Given two graphs $G_{1}$ and $G_{2}$, where $\mid G_{1}\mid$ = n and $\mid G_{2}\mid$ = m, their algorithms, respectively, use a $(n+m) \times (n+m)$ cost matrix $C_{1}$ and a $n \times m$ cost matrix $C_{2}$, which both give the cost of mapping a vertex $v \in V(G_{1})$ to a vertex $v \in V(G_{2})$. Next,  Munkres algorithm \cite{p:Munkres57}, also known as the Hungarian algorithm, which runs in polynomial time, is applied to find an exact one-to-one vertex assignment  that minimizes the total mapping cost. Each entry in the cost matrix represents the cost of matching vertex $v \in V(G_{1})$ to a vertex $u \in V(G_{2})$. The cost of matching a pair of nodes $c_{ij}$ could equal the transformed cost as defined for the graph edit distance in the following subsection.
+
+In this subsection, more accurate cost estimation allows the discovery of better graph matchings and hence more accurate edit distances.  The cost of matching a pair of vertices, element $c_{ij}$ of the matrix, could equal the transformed cost as defined for the graph edit distance, which consists three components:  Host jaccard similarity, In-degree,  jaccard similarity and  Out-degree jaccard similarity can be observed developing between vertices $v$ and $u$ but can be presented as $\delta \left ( v, u \right )$, $\delta^{-} \left ( v, u \right )$ and $\delta^{+} \left ( v, u \right )$, and their details can be defined as follows: 
+
+\begin{equation}
+        \label{eq:hostop}
+ \delta \left ( v, u \right ) = \left | 1 - \frac{Bit_{op}\left ( v \right ) \cap Bit_{op}\left ( u \right )}{Bit_{op}\left ( v \right ) \cup  Bit_{op}\left ( u \right )} \right |
+  \end{equation}
+ 
+ \begin{equation}
+        \label{eq:inop}
+\delta^{-} \left ( v, u \right ) = \left | 1 - \frac{Neighbor^{-}\left ( v \right ) \cap Neighbor^{-}\left ( u \right )}{Neighbor^{-}\left ( v \right ) \cup  Neighbor^{-}\left ( u \right )} \right |
+ \end{equation}
+ 
+ \begin{equation}
+        \label{eq:outop}
+\delta^{+} \left ( v, u \right ) = \left | 1 - \frac{Neighbor^{+}\left ( v \right ) \cap Neighbor^{+}\left ( u \right )}{Neighbor^{+}\left ( v \right ) \cup  Neighbor^{+}\left ( u \right )} \right |
+ \end{equation}
+  
+ where $Bit_{op}\left ( v \right )$ indicates the extraction of vertex $v$'s opcode components, presented by 218 binary bits defined as the above section. Additionally, $Neighbor^{-}\left ( v \right )$ and $Neighbor^{+}\left ( v \right )$ , respectively, present the Neighbor vertices of vertex $v$, which are defined as follows:
+ 
+ \begin{equation}
+        \label{eq:indegree}
+Neighbor^{-}\left ( v \right ) = \left \{ z \mid e_{z,v} \in E \right \}
+  \end{equation}
+  
+  \begin{equation}
+        \label{eq:outdegree}
+ Neighbor^{+}\left ( v \right ) = \left \{ z \mid e_{v,z} \in E \right \}
+  \end{equation}
+   
+ Clearly, each element $c_{ij}$ of the cost matrix indicates the bijective mapping of the i-th vertex to the j-th vertex that can be defined as follows:
+  
+  \begin{equation}
+        \label{eq:cost_element}
+ c_{ij} = \delta \left ( i, j \right ) + \delta^{-} \left ( i, j \right ) + \delta^{+} \left ( i, j \right )
+   \end{equation}
+
+The Munkres algorithm \cite{p:Munkres57} \cite{p:Kuhn56} is a known algorithm that solves the bipartite matching problem in polynomial time. After obtaining the conceptual matched matrix,  we implement the Munkres algorithm to find the optimal permutation that minimizes the cost as the similarity distance between the two Android malicious samples' graphs $g_{1}$ and $g_{2}$. In Algorithm~\ref{alg:WBPAlgo}, the first three steps determine whether the cost matrix has the specific scenario which means the optimization bipartite match from source sample's vertex to target sample's vertex already exists. Then, we can decide whether the scope of the cost matrix needs to be reduced. Furthermore, we acquire a conceptual match matrix $C'$ from the function $f_{gm}(C)$, which can effectively eliminate the side-effects of each wide variability.
