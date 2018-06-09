@@ -13,6 +13,10 @@ We build a botnet malware and monitor its HTTP outbound. As we know, early botne
 
 \subsubsection{real-world data}
 
+We have collected the traffic from more than hundreds of machines in the technology industry. Users of these machines include accountants, engineers, sales executive, and administrative personnel. Since the users vary from different occupation, the data has complexity. We have collected data by \textit{tcpdump} with three working days. Besides, we have set the \textit{tcpdump} that only collected the traffic with the outbound HTTP protocol.
+
+The real world dataset has splited to two set, one is training and the other is testing. Training set has covered first few days and testing set is the last of traffic.
+
 Malware analyzed in following experiments are malicious behavioral sequences from collected malicious executable files in real world.  In proposed method implementation, collected malware were paresed and information of four major fields in table~\ref{tbl:db_01}. Table~\ref{tbl:db_01} also lists the the number of malware families, the size of gathered data, and operation types in malicious behavioral sequences. 
 
 
