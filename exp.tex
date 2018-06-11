@@ -10,18 +10,18 @@ In this section, we would describe the datasets that we used to perform our expe
 \caption{Overview of the Datasets}
 \label{tbl:db_02}
 \begin{tabular}{|c|c|c|c|c|}
-\hline
+\hline\hline
 Dataset         & Features & Type            & All Samples & Malicious Samples \\ \hline
 Industy\_flow01 & Packets  & Malicious Flows & 1690869     & N/A               \\ \hline
 Industy\_flow02 & Packets  & Malicious Flows & 68234       & N/A               \\ \hline
 Dataset\_01     & Packets  & Botnet          & 220         & 220               \\ \hline
 Dataset\_02     & Packets  & Botnet          & 216         & 216               \\ \hline
-Dataset\_03     & Packets  & Botnet          & 1045         & 168               \\ \hline
+Dataset\_03     & Packets  & Botnet          & 1045         & 168               \\ \hline\hline
 \end{tabular}
 \end{table*}
 
 
-In the following, we briefly present the datasets we used for evaluation in our system.
+In the following, we briefly present the datasets we used for evaluation in our system. The dataset information is represented in table~\ref{tbl:db_02}.
 
 \begin{itemize}
 
@@ -35,8 +35,6 @@ In this paper, our goal is a detection of counterfeit fingerprint which would pr
 
 \end{itemize}
 
-The detail information or the dataset is represented in table~\ref{tbl:db_02}.
-
 \subsection{Evaluation Metrics}
 
 Essentially, Our system is a flow filter aim to identify the suspicious requests with the headers field. Four well-known metrics for evaluating the effectiveness of proposed method are adopted as followings: ``true positive''($TP$) means the number of normal requests which belong to normal traffic. ``False negative''($FN$) is the number of normal traffic and its results are wrongly predicted. Similarly, ``true negative''($TN$) means the number of abnormal traffic and the system predict it as malicious requests, while ``false positive''($FP$) is the number of abnormal traffic that the system predicts it as normal traffic. Based on the accumulation of $TP, FN, TN$, and $FP$, one extended metrics ($accuracy$) popularly used in machine learning problems are also adopted here to evaluate proposed method and listed in equations below. Note that the optimal $accuracy$ of $1.0$ means all of the malware are successfully picked out by the proposed approach. 
@@ -49,14 +47,23 @@ Accuracy = \frac{TP+TN}{TP+TN+FP+FN}
 
 \subsection{Effectiveness Analysis}
 
-Just as we know, malware can easily modify the HTTP headers. Hence, we build three similar malware to evaluate our approach. With these botnets, they all have the same purpose. Moreover, they would steal some sensitive information (such as OS information, system account, and the password) and send requests to the C\&C server periodically waiting for commands to execute. The difference between them is the degree of the spoofing HTTP headers. The botnet in dataset\_01 does not spoof any HTTP headers. We fill up with the empty to the User-Agent field. The botnet in datset\_02 only simply sets the User-agent as a common browser which calls Internet Explore (IE). In the dataset\_03 , botnet would specifically detect the victim's browser version, system language and then fill them into the HTTP header fields. In addition, for the reference field in HTTP headers we default to point to the google website. The result show in table~\ref{tbl:db_03}, we can see both detection system has the great performance with dataset\_01 and dataset\_02. However, we can notice that our system has a better performance for botnets that based on advanced spoofing methods.
+Just as we know, malware can easily modify the HTTP headers. Hence, we build three similar malware to evaluate our approach. With these botnets, they all have the same purpose. Moreover, they would steal some sensitive information (such as OS information, system account, and the password) and send requests to the C\&C server periodically waiting for commands to execute. The difference between them is the degree of the spoofing HTTP headers. The botnet in dataset\_01 does not spoof any HTTP headers. We fill up with the empty to the User-Agent field. The botnet in datset\_02 only simply sets the User-agent as a common browser which calls Internet Explore (IE). In the dataset\_03 , botnet would specifically detect the victim's browser version, system language and then fill them into the HTTP header fields. In addition, for the reference field in HTTP headers we default to point to the google website. 
+
+The result show in table~\ref{tbl:db_03}, we can see both detection system has the great performance with dataset\_01 and dataset\_02. However, we can notice that our system has a better performance for botnets that based on advanced spoofing methods.
+
+In the training stage, We build each Fingerprint through the clean data for both systems. For with no User-Agent request headers, which filled in '-' in User-Agent field, we will use the domain and IP to create the own Fingerprint. This concept is just like the idea of the whitelist. Therefore malware cannot evade our system detection through the setting of HTTP headers with empty User-Agent. The result shows two detection system both got an excellent performance in this part of the dataset.
+
+Some malware would use a web-like User-Agent to camouflage themselves as a browser to avoid the system detection. In dataset\_02, the malware would modify the HTTP header field of User-Agent to Internet Explorer, disguise itself as a browser and communicate with C\&C server. For this validation set, both systems also got a good score. When a malware disguises itself as a browser, our system would first check the request whether we have this Fingerprint or not. If yes, the system will compare the difference with these Fingerprints. So unless the malware can guess or use some advanced technology to get the browser information and the language of the OS system used by the victim, And then using this information to fake the HTTP headers fields. if it were otherwise, it is not easy to avoid the first stage of our detection system.
+
+For advanced spoofing methods, our malware can detect the victim's system information, browser version, and system language, and then it would also modify the HTTP header fields when sending requests to C\&C server. For this reason, it is not robust with only the first phase of detection. Therefore, in addition to creating the Fingerprint, we also established the referrer correlation graph during the training phase. For the traffic with the labeling as normal through the first phase by the detection system, We will carry out the second phase of detection, the detection system would compare the graph edit distance between each referrer correlation graphs. The idea of this detection stems from the fact that we think when humans are browsing the websites, they would click the hyperlink to where they want to browse, and these referrers of the requests can be generated as a referrer correlation path. On the other hand, malware that disguised as a browser cannot link out such a path. We apply this concept to use Graph Edit Distance(GED) to calculate the difference between these referrer correlation graphs. The results show that our approach can detect the malware which using advanced spoofing methods to evading detection system.
+
 
 \begin{table*}[!h]
 \centering
 \caption{Simulated Data}
 \label{tbl:db_03}
 \begin{tabular}{|c|c|c|c|c|c|c|c|}
-\hline
+\hline\hline
 \multirow{2}{*}{Dataset}     & \multirow{2}{*}{System} & \multirow{2}{*}{HTTP Requests} & \multicolumn{4}{c|}{Evaluation Metrics} & \multirow{2}{*}{Accuracy} \\ \cline{4-7}
                              &                         &                                & TP       & TN       & FP       & FN     &                           \\ \hline
 \multirow{2}{*}{Dataset\_01} & DECANTeR \cite{bortolameotti2017decanter}                & \multirow{2}{*}{220}           &          &          &          &        &                           \\ \cline{2-2} \cline{4-8} 
@@ -64,7 +71,7 @@ Just as we know, malware can easily modify the HTTP headers. Hence, we build thr
 \multirow{2}{*}{Dataset\_02} & DECANTeR \cite{bortolameotti2017decanter}                & \multirow{2}{*}{216}           &          &          &          &        &                           \\ \cline{2-2} \cline{4-8} 
                              & Our System              &                                &          &          &          &        &                           \\ \hline
 \multirow{2}{*}{Dataset\_03} & DECANTeR \cite{bortolameotti2017decanter}                & \multirow{2}{*}{1045}          & 869      & 0        & 168      & 8      & 0.8315                    \\ \cline{2-2} \cline{4-8} 
-                             & Our System              &                                & 869      & 168      & 0        & 8      & 0.9923                    \\ \hline
+                             & Our System              &                                & 869      & 168      & 0        & 8      & 0.9923                    \\ \hline\hline
 \end{tabular}
 \end{table*}
 
