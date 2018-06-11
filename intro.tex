@@ -19,7 +19,6 @@ To evade intrusion detections, malware could make counterfeit fingerprint (e.g.,
 \label{fig:attack}
 \end{figure}
 
-
 \begin{figure}[!tbp]
   \centering
   \subfloat[Normal Referrer Correlation Graph]{\includegraphics[width=0.25\textwidth]{image/normal.png}\label{fig:normal}}
@@ -33,7 +32,7 @@ To resolve this problem, we propose an approach based on deviation estimating wh
 
 \begin{itemize}
 
-\item We propose a solution to detect outbound anomalous HTTP connections, which is based on browser fingerprint and referrer correlation techniques. Furthermore, our approach automatically generates  fingerprints from network traffic, filter anomalous communications from the monitored hosts, and then identify counterfeit fingerprint in normal traffics which are filtered by DECANTeR \cite{bortolameotti2017decanter}.
+\item We propose a solution to detect outbound anomalous HTTP connections, which is based on browser fingerprint and referrer correlation techniques. Furthermore, our approach automatically generates  fingerprints from network traffic, filter anomalous communications from the monitored hosts, and then identify counterfeit fingerprint in normal traffics which are filtered by fingerprints \cite{bortolameotti2017decanter}.
 
 \item We proposed a counterfeit fingerprint detection to resolve counterfeit problem, which identifies fake contents of HTTP header based on graph edit distance. Besides, we also have implemented a system based on our approach in python, and the current state of the art regarding client-side anomaly detection which is already in collaboration with other institution and enterprise. 
 
