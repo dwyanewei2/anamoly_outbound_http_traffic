@@ -21,7 +21,7 @@ Dataset\_03     & Packets  & Botnet          & 1045         & 168               
 \end{table*}
 
 
-In the following, we briefly present the datasets we used for evaluation in our system. The dataset information is represented in table~\ref{tbl:db_02}.
+In the following, we briefly present the datasets we used for evaluation in our system.
 
 \begin{itemize}
 
@@ -34,6 +34,8 @@ The outbound HTTP traffics we collect from more than hundreds of machines in a t
 In this paper, our goal is a detection of counterfeit fingerprint which would pretend to be browser activities in outbound HTTP traffics. However, this kind of attack is secret and hidden penetration, and hard to collect in the real world. Therefore, we build a botnet malware and monitor its outbound HTTP traffics. As we know, early botnets generally used Internet Relay Chat (IRC) channel to communicate C\&C server. In recent years, botnets also start to communicate C\&C server through HTTP protocol. Furthermore, we need to build a botnet with the spoofing headers which can evade other detection systems. That is why we collect three different simulated botnet traffics. In dataset\_01, it has no spoofing headers from infected host's outbound HTTP traffics. Dataset\_02 consists of the botnet traffics with simple spoofing, and which means our botnet sending the requests to web-like user agent through HTTP protocol. Finally, dataset\_03 is totally modifying the headers information, and the malware investigates which browser is used by the user or host, and fills the field User-Agent with that specific browser. Moreover, it also fills up some common requests header fields, like Accept, Accept-Encoding, Accept-Language, and Referrer.
 
 \end{itemize}
+
+The detail information or the dataset is represented in table~\ref{tbl:db_02}.
 
 \subsection{Evaluation Metrics}
 
