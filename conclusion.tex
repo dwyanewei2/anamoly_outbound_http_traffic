@@ -1,3 +1,15 @@
 \section{Conclusion}
 
-In this work we have shown how HTTP-based applications can be fingerprinted and used to detect anomalous communications. This technique can be used without using malicious data during the training phase, therefore it avoids any possible bias from specific malware samples. Moreover, the proposed technique detects anomalous communication independently from their payload, thereby being a promising solution for data exfiltration and unknown malware. This distinguishes our work from most of the existing solutions, which often model network traffic to detect specific attacks or malware behavior (extracted from clusters of known malware), or tries to identify sensitive data within the network payload. We have implemented this technique in a system called DECANTeR, and we have evaluated it, showing better detection performance than other state of the art solutions.
+In this paper, we propose an anomaly detection for HTTP-based browsers based on fingerprint and referrer correlation. Our approach never needs malware activities in training phase, and it could disable the bias issue which is common and usual in specific malware (e.g., ransomware). Furthermore, we also could deal with data leakage and exfiltration performed by malware in our approach. In general, existing solutions focus on model network traffic to identify specific malware, or need to analyze network payload for realizing how the sensitive data stole by hackers. But, our method is never limited by them, and also compare to existing system DECANTeR \cite{bortolameotti2017decanter}, and which shows a better detection performance result. Contributions of our work can be summarized as followings:
+
+\begin{itemize}
+
+\item {\bf Well Problem Modeling}
+
+The proposed approach collects real-world traffics, and makes learning client-side intrusion threats from them as a computable problem, with well-defined adjacent vector and corresponding graph.  
+
+\item {\bf Automatic and Accurate Threat Detection}
+
+System simultaneously considers heterogeneous entities such as user-agent, domain, language, and referrer. And various relationships among those entities are also designed to describe different attacking scenarios. Based on that, adjacent vector and correlation graph are then adopted to give complementary detections. Experiment shows that system outperforms our approaches in terms of accuracy(100\%) and recall(100\%) respectively, especially a covert attacking threat counterfeit fingerprint, can be successfully detected.
+
+\end{itemize}
