@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.6.6)  12 JUN 2018 15:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.6.6)  12 JUN 2018 16:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -568,27 +568,22 @@ File: image/attack.png Graphic file (type png)
 <use image/attack.png>
 Package pdftex.def Info: image/attack.png  used on input line 17.
 (pdftex.def)             Requested size: 250.0pt x 75.14278pt.
-<image/normal.png, id=3, 241.90375pt x 98.3675pt>
+<image/normal.png, id=3, 399.4925pt x 235.88126pt>
 File: image/normal.png Graphic file (type png)
 <use image/normal.png>
 Package pdftex.def Info: image/normal.png  used on input line 24.
-(pdftex.def)             Requested size: 129.0pt x 52.45871pt.
-<image/malware.png, id=4, 241.90375pt x 117.43875pt>
+(pdftex.def)             Requested size: 206.39685pt x 121.86711pt.
+<image/malware.png, id=4, 436.63126pt x 300.12125pt>
 File: image/malware.png Graphic file (type png)
 <use image/malware.png>
 Package pdftex.def Info: image/malware.png  used on input line 26.
-(pdftex.def)             Requested size: 129.0pt x 62.62929pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 26--26
-[]\OT1/ptm/m/n/8 (b) |Ma-li-cious Re-fer-rer Cor-re-la-tion
- []
-
-[1{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+(pdftex.def)             Requested size: 206.39685pt x 141.86757pt.
+) (./method.tex [1{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pd
+ftex.map}
 
 
- <./image/attack.png> <./image/normal.png> <./image/malware.png>]) (./method.te
-x
-<image/sa.png, id=18, 959.585pt x 471.7625pt>
+ <./image/attack.png>]
+<image/sa.png, id=16, 959.585pt x 471.7625pt>
 File: image/sa.png Graphic file (type png)
 <use image/sa.png>
 Package pdftex.def Info: image/sa.png  used on input line 11.
@@ -598,12 +593,12 @@ Package pdftex.def Info: image/sa.png  used on input line 11.
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 40.
 
-[2]
-<image/ref_graph.png, id=29, 384.43625pt x 341.275pt>
+[2 <./image/normal.png> <./image/malware.png>]
+<image/ref_graph.png, id=29, 740.7675pt x 651.43375pt>
 File: image/ref_graph.png Graphic file (type png)
 <use image/ref_graph.png>
 Package pdftex.def Info: image/ref_graph.png  used on input line 77.
-(pdftex.def)             Requested size: 170.0pt x 150.91653pt.
+(pdftex.def)             Requested size: 250.0pt x 219.84442pt.
  [3 <./image/sa.png> <./image/ref_graph.png>]) (./exp.tex
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -611,7 +606,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[4]) (./related_work.tex) (./conclusion.tex) (./ack.tex) [5]
+[4]) (./related_work.tex) (./conclusion.tex [5]) (./ack.tex)
 (./conference_041818.bbl)
 
 ** Conference Paper **
@@ -626,30 +621,34 @@ Before submitting the final camera ready copy, remember to:
 
 [6
 
-] (./conference_041818.aux) ) 
+] (./conference_041818.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
  5742 strings out of 492649
  87679 string characters out of 6129623
- 170526 words of memory out of 5000000
+ 172526 words of memory out of 5000000
  9517 multiletter control sequences out of 15000+600000
  44469 words of font info for 98 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,21n,49p,1579b,343s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvip
-s/base/8r.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmex10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmmi10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmmi5.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-mi7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr1
-0.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.p
-fb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb>
-</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
-/usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></u
-sr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/t
-exlive/2018/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/20
-18/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2018/texmf-d
-ist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on conference_041818.pdf (6 pages, 419936 bytes).
+ 44i,21n,49p,1579b,347s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
+exlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
+xlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
+live/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texli
+ve/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive
+/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2
+018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2018
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2018/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2018/texmf
+-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2018/texmf-dist/font
+s/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/u
+rw/times/utmr8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/u
+tmri8a.pfb>
+Output written on conference_041818.pdf (6 pages, 317711 bytes).
 PDF statistics:
  87 PDF objects out of 1000 (max. 8388607)
  55 compressed objects within 1 object stream
