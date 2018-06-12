@@ -21,16 +21,16 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
-\bibitem{gu2008botsniffer}
-G.~Gu, J.~Zhang, and W.~Lee, ``Botsniffer: Detecting botnet command and control
-  channels in network traffic,'' 2008.
-
 \bibitem{bortolameotti2017decanter}
 R.~Bortolameotti, T.~van Ede, M.~Caselli, M.~H. Everts, P.~Hartel, R.~Hofstede,
   W.~Jonker, and A.~Peter, ``Decanter: Detection of anomalous outbound http
   traffic by passive application fingerprinting,'' in \emph{Proceedings of the
   33rd Annual Computer Security Applications Conference}.\hskip 1em plus 0.5em
   minus 0.4em\relax ACM, 2017, pp. 373--386.
+
+\bibitem{gu2008botsniffer}
+G.~Gu, J.~Zhang, and W.~Lee, ``Botsniffer: Detecting botnet command and control
+  channels in network traffic,'' 2008.
 
 \bibitem{grill2014malware}
 M.~Grill and M.~Reh{\'a}k, ``Malware detection using http user-agent
@@ -47,5 +47,16 @@ N.~Kheir, ``Analyzing http user agent anomalies for malware detection,'' in
 J.~Kinable and O.~Kostakis, ``Malware classification based on call graph
   clustering,'' \emph{Journal in computer virology}, vol.~7, no.~4, pp.
   233--245, 2011.
+
+\bibitem{borders2004web}
+K.~Borders and A.~Prakash, ``Web tap: detecting covert web traffic,'' in
+  \emph{Proceedings of the 11th ACM conference on Computer and communications
+  security}.\hskip 1em plus 0.5em minus 0.4em\relax ACM, 2004, pp. 110--120.
+
+\bibitem{schwenk2011adaptive}
+G.~Schwenk and K.~Rieck, ``Adaptive detection of covert communication in http
+  requests,'' in \emph{Computer Network Defense (EC2ND), 2011 Seventh European
+  Conference on}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2011, pp.
+  25--32.
 
 \end{thebibliography}
