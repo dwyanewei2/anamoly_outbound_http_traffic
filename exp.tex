@@ -14,8 +14,8 @@ In this section, we would describe the datasets that we used to perform our expe
 Dataset         & Features & Type            & All Samples & Malicious Samples \\ \hline
 Industy\_flow01 & Packets  & Malicious Flows & 1690869     & N/A               \\ \hline
 Industy\_flow02 & Packets  & Malicious Flows & 68234       & N/A               \\ \hline
-Dataset\_01     & Packets  & Botnet          & 220         & 220               \\ \hline
-Dataset\_02     & Packets  & Botnet          & 216         & 216               \\ \hline
+Dataset\_01     & Packets  & Botnet          & 1444         & 350               \\ \hline
+Dataset\_02     & Packets  & Botnet          & 1342         & 240               \\ \hline
 Dataset\_03     & Packets  & Botnet          & 1045         & 168               \\ \hline\hline
 \end{tabular}
 \end{table*}
@@ -55,14 +55,16 @@ Accuracy = \frac{TP+TN}{TP+TN+FP+FN}
 \hline\hline
 \multirow{2}{*}{Dataset}     & \multirow{2}{*}{System} & \multirow{2}{*}{HTTP Requests} & \multicolumn{4}{c|}{Evaluation Metrics} & \multirow{2}{*}{Accuracy} \\ \cline{4-7}
                              &                         &                                & TP       & TN       & FP       & FN     &                           \\ \hline
-\multirow{2}{*}{Dataset\_01} & DECANTeR \cite{bortolameotti2017decanter}                & \multirow{2}{*}{220}           &          &          &          &        &                           \\ \cline{2-2} \cline{4-8} 
-                             & Our System              &                                &          &          &          &        &                           \\ \hline
-\multirow{2}{*}{Dataset\_02} & DECANTeR \cite{bortolameotti2017decanter}                & \multirow{2}{*}{216}           &          &          &          &        &                           \\ \cline{2-2} \cline{4-8} 
-                             & Our System              &                                &          &          &          &        &                           \\ \hline
+\multirow{2}{*}{Dataset\_01} & DECANTeR \cite{bortolameotti2017decanter}                & \multirow{2}{*}{1444}          & 1094      & 350      & 0       & 0      & 1.0000                     \\ \cline{2-2} \cline{4-8} 
+                             & Our System              &                                & 1094      & 350      & 0       & 0      & 1.0000                    \\ \hline
+\multirow{2}{*}{Dataset\_02} & DECANTeR \cite{bortolameotti2017decanter}                & \multirow{2}{*}{1342}          & 1102      & 240      & 0       & 0      & 1.0000                     \\ \cline{2-2} \cline{4-8} 
+                             & Our System              &                                & 1102      & 240      & 0       & 0      & 1.0000                     \\ \hline
 \multirow{2}{*}{Dataset\_03} & DECANTeR \cite{bortolameotti2017decanter}                & \multirow{2}{*}{1045}          & 869      & 0        & 168      & 8      & 0.8315                    \\ \cline{2-2} \cline{4-8} 
                              & Our System              &                                & 869      & 168      & 0        & 8      & 0.9923                    \\ \hline\hline
 \end{tabular}
 \end{table*}
+
+
 
 Just as we know, malware can easily modify the HTTP header, therefore, we build three kind of malware to evaluate our approach. With these botnets, they all have the same purpose, and which would steal some sensitive information (such as OS information, system account, and the password) and send requests to the C\&C server periodically waiting for commands to execute. The difference between them is the degree of the spoofing HTTP headers. The botnet in dataset\_01 doesn't spoof any HTTP headers, and we fill up with the empty to the User-Agent field. The botnet in datset\_02 only simply sets the User-agent as a common browser which calls Internet Explore (IE). In the dataset\_03 , botnet would specifically detect the victim's browser version and system language, and then fill them into the HTTP header. In addition, for the reference field in a HTTP header that we point to the default website. The result is shown in table~\ref{tbl:db_03}, we can see that our system and DECANTeR \cite{bortolameotti2017decanter} both have the great performance with dataset\_01 and dataset\_02. However, we can notice that our system has a better performance for botnets in dataset\_03 based on advanced spoofing methods.
 
