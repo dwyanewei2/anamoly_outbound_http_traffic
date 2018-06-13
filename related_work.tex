@@ -1,1 +1,8 @@
 \section{Related Work}
+
+Many studies focus on the C\&C connection detection for identifying Botnet, such as: IRC, HTTP, SMTP in the phases of probe, penetrate, escalate, expand of cyber killer chain.  Malware clustering is capable to generate the malware signatures of communication on the network.   Several studies generate the signatures via clustering approaches from known botnet traffics ~\cite{p:zarras14}.   Anomaly-based detections leverage different kinds features to identify different kinds of malware traffics, such as detail of service~\cite{p:feinstein03}, context of Web attacks~\cite{p:krugel03},  encrypted data exfiltration~\cite{p:he14}.  Although most of this work uses pre-defined features from experts,  “DNS Tunneling Detector by DL” uses neither specified features, nor  known malicious samples to train the models~\cite{j:zhang16}.  In addition, several work incorporates network and host features to do the detection~\cite{p:schwenk11}~\cite{p:Borders04}~\cite{p:schwenk11}.  However, this kind of work suffer high false positive problems result in being impractical.  Bortolameotti et al.~\cite{p:Bortolameotti17} proposed DECANTeR system to identify the outbound HTTP traffics whether anomalous or not.   The proposed method note only intends to create detection model without from sets of known malware samples, but also without additional knowledge of threats or known malware samples.
+
+Because of leveraging Deep Learning, this work is capable to have  following contributions:
+(1) without known malware samples
+(2) without known features
+(3) tolerance of fake header of HTTP
