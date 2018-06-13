@@ -5,7 +5,7 @@
 \citation{bortolameotti2017decanter}
 \citation{bortolameotti2017decanter}
 \@writefile{toc}{\contentsline {section}{\numberline {I}Introduction}{1}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces A process of attacking scenario. The comment C\&C architecture can be divided into push style and pull style. However, they all have one thing in common: to avoid the detection system. Hackers would try to use advanced technology to avoid system detection\relax }}{1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces A process of an attacking scenario. The common C\&C architecture can be divided into push and pull styles. However, they both have the same goal: to avoid the detection system. Hackers would use advanced technology to avoid system detection by counterfeit HTTP header.\relax }}{1}}
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
 \newlabel{fig:attack}{{1}{1}}
 \citation{bortolameotti2017decanter}
@@ -16,7 +16,7 @@
 \newlabel{sub@fig:normal}{{(a)}{a}}
 \newlabel{fig:malware}{{2b}{2}}
 \newlabel{sub@fig:malware}{{(b)}{b}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Difference between normal and malicious referrer correlation graph. The ellipse nodes represent the webpage and the rectangular nodes represent the sources that the web page needed. In (a), this figure shows a page first layer normal referrer graph. Our system would use these first layer graphs to train the referrer correlation graph. In (b), the red rectangular node means the unusual URL which does not appear in the correlation graph after compared with the training set. It may be the malware counterfeit the "Referrer" field in HTTP headers.\relax }}{2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Difference between normal and malicious referrer correlation graphs. The ellipse nodes represent the webpage, and rectangular nodes represent the sources that the web page needed. In (a), this figure shows a page's normal referrer graph in first reference layer. Our system would use these reference graphs to construct the referrer correlation graph. In (b), the red rectangular node means the unusual URL which does not appear in the correlation graph of the training set. It is caused by malware forge the "Referrer" field in the HTTP headers.\relax }}{2}}
 \newlabel{fig:length_count}{{2}{2}}
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Normal Referrer Correlation Graph}}}{2}}
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Malicious Referrer Correlation Graph}}}{2}}
@@ -35,7 +35,7 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-E}}Referrer Correlation Graph Constructor}{3}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-F}}Graph Similarity Estimator}{3}}
 \citation{bortolameotti2017decanter}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces An Example of a referrer correlation graph generated from a browser traffic. The ellipse nodes represent the webpage that users have viewed by clicking the hyperlink in the browser. The rectangular nodes represent the sources that the web page needed. The arrow pointing means which node is referred by the web page.\relax }}{4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces An Example of a referrer correlation graph generated from a browser traffic. The ellipse nodes represent the webpage that users have viewed by clicking the hyperlink in the browser. The rectangular nodes represent the sources that the web page needed. The arrow edge means which node is referred by the web page.\relax }}{4}}
 \newlabel{fig:ref_graph}{{4}{4}}
 \newlabel{equ:ged_idea}{{2}{4}}
 \newlabel{equ:ged_implementation}{{3}{4}}
@@ -53,12 +53,12 @@
 \citation{borders2004web}
 \citation{bortolameotti2017decanter}
 \citation{bortolameotti2017decanter}
-\citation{bortolameotti2017decanter}
-\@writefile{lot}{\contentsline {table}{\numberline {II}{\ignorespaces Overview of the Datasets. We collect five datasets which industry series sets were real-world flows and the remaining of three were simulated data. Since the real-world traffic cannot be properly labeled, we treat real-world data as benign traffic. These data are captured by tcpdump and then using the scapy module to extract the HTTP header information we need.\relax }}{5}}
+\@writefile{lot}{\contentsline {table}{\numberline {II}{\ignorespaces Overview of the Datasets. We collect five datasets, in which, industry series sets were real-world flows, and the remaining of three were simulated data. The real-world traffic were labeled as benign because the security device never trigger any alert in an enterprise. These data are captured by tcpdump and then using the scapy module to extract the HTTP header information we need.\relax }}{5}}
 \newlabel{tbl:db_02}{{II}{5}}
 \newlabel{eq:accuracy}{{4}{5}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-C}}Effectiveness Analysis}{5}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-D}}Limitation and Future Work}{5}}
+\citation{bortolameotti2017decanter}
 \citation{bortolameotti2017decanter}
 \bibstyle{IEEEtran}
 \bibdata{IEEEtranBST2/IEEEexample}
@@ -69,7 +69,7 @@
 \bibcite{kinable2011malware}{5}
 \bibcite{borders2004web}{6}
 \bibcite{schwenk2011adaptive}{7}
-\@writefile{lot}{\contentsline {table}{\numberline {III}{\ignorespaces Overview of Evaluation. For testing the robustness, we add the real-world traffic into each simulated data. We compare the performance of our system and DECANTeR\cite  {bortolameotti2017decanter} against different data sets. The accuracy is calculated by equation (4\hbox {}) and the detail result will show below.\relax }}{6}}
+\@writefile{lot}{\contentsline {table}{\numberline {III}{\ignorespaces Overview of Evaluation. For evaluate the robustness, we add the real-world traffic into each simulated data. We compare the effective performance between our system and DECANTeR \cite  {bortolameotti2017decanter} against different datasets. The accuracy is calculated by equation (4\hbox {}) and the detail result will show below.\relax }}{6}}
 \newlabel{tbl:db_03}{{III}{6}}
 \@writefile{toc}{\contentsline {section}{\numberline {IV}Related Work}{6}}
 \@writefile{toc}{\contentsline {section}{\numberline {V}Conclusion}{6}}

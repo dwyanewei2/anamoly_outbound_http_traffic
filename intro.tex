@@ -15,7 +15,7 @@ To evade intrusion detections, malware could make counterfeit fingerprint (e.g.,
 \begin{figure}[!t]
 \centering
 \includegraphics[width=250pt]{image/attack.png}
-\caption{A process of attacking scenario. The comment C\&C architecture can be divided into push style and pull style. However, they all have one thing in common: to avoid the detection system. Hackers would try to use advanced technology to avoid system detection}
+\caption{A process of an attacking scenario. The common C\&C architecture can be divided into push and pull styles. However, they both have the same goal: to avoid the detection system. Hackers would use advanced technology to avoid system detection by counterfeit HTTP header.}
 \label{fig:attack}
 \end{figure}
 
@@ -24,9 +24,9 @@ To evade intrusion detections, malware could make counterfeit fingerprint (e.g.,
   \subfloat[Normal Referrer Correlation Graph]{\includegraphics[width=0.4\textwidth]{image/normal.png}\label{fig:normal}}
   \hfill
   \subfloat[Malicious Referrer Correlation Graph]{\includegraphics[width=0.4\textwidth]{image/malware.png}\label{fig:malware}}
-  \caption{Difference between normal and malicious referrer correlation graph. The ellipse nodes represent the webpage and the rectangular nodes represent the sources that the web page needed.
-In (a), this figure shows a page first layer normal referrer graph. Our system would use these first layer graphs to train the referrer correlation graph.
-In (b), the red rectangular node means the unusual URL which does not appear in the correlation graph after compared with the training set.  It may be the malware counterfeit the "Referrer" field in HTTP headers.}
+  \caption{Difference between normal and malicious referrer correlation graphs. The ellipse nodes represent the webpage, and rectangular nodes represent the sources that the web page needed.
+In (a), this figure shows a page's normal referrer graph in first reference layer. Our system would use these reference graphs to construct the referrer correlation graph.
+In (b), the red rectangular node means the unusual URL which does not appear in the correlation graph of the training set.  It is caused by malware forge the "Referrer" field in the HTTP headers.}
 \label{fig:length_count}
 \end{figure}
 
