@@ -51,7 +51,7 @@ Field                           & Value for Instance                            
 \end{tabular}
 \end{table}
 
-In previous research \cite{bortolameotti2017decanter}, Bortolameotti et al. identified two types of HTTP applications (e.g., $browser$ and $background$). This subsection aims to filter logs of a PCAP file according to the {\em User-agent}, because we focus on counterfeit fingerprints of browser network activities. To identify browser activities, the browser flags we defined are "Mozilla", "Opera", "MQQBrowser", "UCWEB",  "NOKIA5700", "Openwave", "Safari", and "Chrome", and which are used for string matching in field {\em User-agent}. Furthermore, in the testing phase, an implementation time-slot $t$ is a fixed time window of $T$ minutes, and the filtered logs is passed to the next module after $t$ ends.
+In previous research \cite{bortolameotti2017decanter}, Bortolameotti et al. identified two types of HTTP applications (e.g., $browser$ and $background$). This subsection aims to filter logs of a PCAP file according to the {\em User-agent}, because we focus on counterfeit fingerprints of browser network activities. To identify browser activities, the browser flags we defined are "Firefox", "Chrome", "Safari", "OPR",  "Opera", "MSIE", "Gecko", "Trident", and "AppleWebKit", and which are used for string matching in field {\em User-agent}. Furthermore, in the testing phase, an implementation time-slot $t$ is a fixed time window of $T$ minutes, and the filtered logs is passed to the next module after $t$ ends.
 
 %Furthermore, in both training and testing phase, a filtered logs is continuously passed to the next module in the real time.
 
