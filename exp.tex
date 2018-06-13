@@ -12,11 +12,11 @@ In this section, we would describe the datasets that we used to perform our expe
 \begin{tabular}{|c|c|c|c|c|}
 \hline\hline
 Dataset         & Features & Type            & All Samples & Malicious Samples \\ \hline
-Industy\_flow01 & Packets  & Malicious Flows & 1690869     & N/A               \\ \hline
-Industy\_flow02 & Packets  & Malicious Flows & 68234       & N/A               \\ \hline
-Dataset\_01     & Packets  & Botnet          & 1444         & 350               \\ \hline
-Dataset\_02     & Packets  & Botnet          & 1342         & 240               \\ \hline
-Dataset\_03     & Packets  & Botnet          & 1045         & 168               \\ \hline\hline
+Industy\_flow01 & Packets  & Malicious Flows & 1,690,869     & N/A               \\ \hline
+Industy\_flow02 & Packets  & Malicious Flows & 68,234       & N/A               \\ \hline
+Dataset\_01     & Packets  & Botnet          & 1,444         & 350               \\ \hline
+Dataset\_02     & Packets  & Botnet          & 1,342         & 240               \\ \hline
+Dataset\_03     & Packets  & Botnet          & 1,045         & 168               \\ \hline\hline
 \end{tabular}
 \end{table*}
 
@@ -27,11 +27,11 @@ In the following, we briefly present the datasets we used for evaluation in our 
 
 \item {\bf Real-world Data}
 
-The outbound HTTP traffics we collect from more than hundreds of machines in a technology industry. Users of these machines include accountants, engineers, sales executive, and administrative personnel. Since the users vary from different occupations that lets data become various and complexity. The real world dataset has split into two sets, one is training and the other is testing. Training set has covered first few days and testing set is the traffics of last days. In training set, it contains 1,690,869 HTTP requests. and the testing set contains 68,234 HTTP requests in this real-world dataset.
+The outbound HTTP traffics we collect from more than hundreds of machines in a technology industry. Users of these machines include accountants, engineers, sales executive, and administrative personnel. Since the users vary from different occupations that lets data become various and complexity. The real world dataset has split into two sets, one is training and the other is testing. Training set has covered first few days and testing set is the traffics of last days. In training set, Industy flow\_01 contains 1,690,869 HTTP requests. and the testing set Industy flow\_02 contains 68,234 HTTP requests in this real-world dataset.
 
 \item {\bf Simulated Data}
 
-In this paper, our goal is a detection of counterfeit fingerprint which would pretend to be browser activities in outbound HTTP traffics. However, this kind of attack is secret and hidden penetration, and hard to collect in the real world. Therefore, we build a botnet malware and monitor its outbound HTTP traffics. As we know, early botnets generally used Internet Relay Chat (IRC) channel to communicate C\&C server. In recent years, botnets also start to communicate C\&C server through HTTP protocol. Furthermore, we need to build a botnet with the spoofing headers which can evade other detection systems. That is why we collect three different simulated botnet traffics. In dataset\_01, it has no spoofing headers from infected host's outbound HTTP traffics. Dataset\_02 consists of the botnet traffics with simple spoofing, and which means our botnet sending the requests to web-like user agent through HTTP protocol. Finally, dataset\_03 is totally modifying the headers information, and the malware investigates which browser is used by the user or host, and fills the field User-Agent with that specific browser. Moreover, it also fills up some common requests header fields, like Accept, Accept-Encoding, Accept-Language, and Referrer.
+In this paper, our goal is a detection of counterfeit fingerprint which would pretend to be browser activities in outbound HTTP traffics. However, this kind of attack is secret and hidden penetration, and hard to collect in the real world. Therefore, we build a botnet malware and monitor its outbound HTTP traffics. As we know, early botnets generally used Internet Relay Chat (IRC) channel to communicate C\&C server. In recent years, botnets also start to communicate C\&C server through HTTP protocol. Furthermore, we need to build a botnet with the spoofing headers which can evade other detection systems. That is why we collect three different simulated botnet traffics. In Dataset\_01, it has no spoofing headers from infected host's outbound HTTP traffics. Dataset\_02 consists of the botnet traffics with simple spoofing, and which means our botnet sending the requests to web-like user agent through HTTP protocol. Finally, Dataset\_03 is totally modifying the headers information, and the malware investigates which browser is used by the user or host, and fills the field User-Agent with that specific browser. Moreover, it also fills up some common requests header fields, like Accept, Accept-Encoding, Accept-Language, and Referrer.
 
 \end{itemize}
 
@@ -55,11 +55,11 @@ Accuracy = \frac{TP+TN}{TP+TN+FP+FN}
 \hline\hline
 \multirow{2}{*}{Dataset}     & \multirow{2}{*}{System} & \multirow{2}{*}{HTTP Requests} & \multicolumn{4}{c|}{Evaluation Metrics} & \multirow{2}{*}{Accuracy} \\ \cline{4-7}
                              &                         &                                & TP       & TN       & FP       & FN     &                           \\ \hline
-\multirow{2}{*}{Dataset\_01} & DECANTeR \cite{bortolameotti2017decanter}                & \multirow{2}{*}{1444}          & 1094      & 350      & 0       & 0      & 1.0000                     \\ \cline{2-2} \cline{4-8} 
-                             & Our System              &                                & 1094      & 350      & 0       & 0      & 1.0000                    \\ \hline
-\multirow{2}{*}{Dataset\_02} & DECANTeR \cite{bortolameotti2017decanter}                & \multirow{2}{*}{1342}          & 1102      & 240      & 0       & 0      & 1.0000                     \\ \cline{2-2} \cline{4-8} 
-                             & Our System              &                                & 1102      & 240      & 0       & 0      & 1.0000                     \\ \hline
-\multirow{2}{*}{Dataset\_03} & DECANTeR \cite{bortolameotti2017decanter}                & \multirow{2}{*}{1045}          & 869      & 0        & 168      & 8      & 0.8315                    \\ \cline{2-2} \cline{4-8} 
+\multirow{2}{*}{Dataset\_01} & DECANTeR \cite{bortolameotti2017decanter}                & \multirow{2}{*}{1,444}          & 1,094      & 350      & 0       & 0      & 1.0000                     \\ \cline{2-2} \cline{4-8} 
+                             & Our System              &                                & 1,094      & 350      & 0       & 0      & 1.0000                    \\ \hline
+\multirow{2}{*}{Dataset\_02} & DECANTeR \cite{bortolameotti2017decanter}                & \multirow{2}{*}{1,342}          & 1,102      & 240      & 0       & 0      & 1.0000                     \\ \cline{2-2} \cline{4-8} 
+                             & Our System              &                                & 1,102      & 240      & 0       & 0      & 1.0000                     \\ \hline
+\multirow{2}{*}{Dataset\_03} & DECANTeR \cite{bortolameotti2017decanter}                & \multirow{2}{*}{1,045}          & 869      & 0        & 168      & 8      & 0.8315                    \\ \cline{2-2} \cline{4-8} 
                              & Our System              &                                & 869      & 168      & 0        & 8      & 0.9923                    \\ \hline\hline
 \end{tabular}
 \end{table*}
