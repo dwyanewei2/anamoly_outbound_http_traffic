@@ -7,7 +7,7 @@ In this section, we would describe the datasets that we used to perform our expe
 
 \begin{table*}[!h]
 \centering
-\caption{Overview of the Datasets. We collect five datasets, in which, industry series sets were real-world flows, and the remaining of three were simulated data. The real-world traffic were labeled as benign because the security device never trigger any alert in an enterprise. These data are captured by tcpdump and then using the scapy module to extract the HTTP header information we need.}
+\caption{Overview of the Datasets. We collect five datasets which industry series sets were real-world flows and the remaining of three were simulated data. Since the real-world traffic cannot be properly labeled, we treat real-world data as benign traffic. These data are captured by tcpdump and then using the scapy module to extract the HTTP header information we need.}
 \label{tbl:db_02}
 \begin{tabular}{|c|c|c|c|c|}
 \hline\hline
@@ -50,18 +50,18 @@ Accuracy = \frac{TP+TN}{TP+TN+FP+FN}
 \begin{table*}[!h]
 \centering
 \caption{Overview of Evaluation.
-For evaluate the robustness, we add the real-world traffic into each simulated data. We compare the effective performance between our system and DECANTeR \cite{bortolameotti2017decanter} against different datasets. The accuracy is calculated by equation (\ref{eq:accuracy}) and the detail result will show below.}
+For testing the robustness, we add the real-world traffic into each simulated data. We compare the performance of our system and DECANTeR\cite{bortolameotti2017decanter} against different data sets. The accuracy is calculated by equation (\ref{eq:accuracy}) and the detail result will show below.}
 \label{tbl:db_03}
 \begin{tabular}{|c|c|c|c|c|c|c|c|}
 \hline\hline
 \multirow{2}{*}{Dataset}     & \multirow{2}{*}{System} & \multirow{2}{*}{HTTP Requests} & \multicolumn{4}{c|}{Evaluation Metrics} & \multirow{2}{*}{Accuracy} \\ \cline{4-7}
                              &                         &                                & TP       & TN       & FP       & FN     &                           \\ \hline
-\multirow{2}{*}{Dataset\_01+Industy\_flow02} & DECANTeR \cite{bortolameotti2017decanter}                & \multirow{2}{*}{1,444}          & 1,094      & 350      & 0       & 0      & 1.0000                     \\ \cline{2-2} \cline{4-8} 
-                             & Our System              &                                & 1,094      & 350      & 0       & 0      & 1.0000                    \\ \hline
-\multirow{2}{*}{Dataset\_02+Industy\_flow02} & DECANTeR \cite{bortolameotti2017decanter}                & \multirow{2}{*}{1,342}          & 1,102      & 240      & 0       & 0      & 1.0000                     \\ \cline{2-2} \cline{4-8} 
-                             & Our System              &                                & 1,102      & 240      & 0       & 0      & 1.0000                     \\ \hline
-\multirow{2}{*}{Dataset\_03+Industy\_flow02} & DECANTeR \cite{bortolameotti2017decanter}                & \multirow{2}{*}{1,045}          & 869      & 0        & 168      & 8      & 0.8315                    \\ \cline{2-2} \cline{4-8} 
-                             & Our System              &                                & 869      & 168      & 0        & 8      & 0.9923                    \\ \hline\hline
+\multirow{2}{*}{Dataset\_01+Industy\_flow02} & DECANTeR \cite{bortolameotti2017decanter}                & \multirow{2}{*}{69,678}          & 69,328      & 350      & 0       & 0      & 1.0000                     \\ \cline{2-2} \cline{4-8} 
+                             & Our System              &                                & 69,328       & 350      & 0       & 0      & 1.0000                    \\ \hline
+\multirow{2}{*}{Dataset\_02+Industy\_flow02} & DECANTeR \cite{bortolameotti2017decanter}                & \multirow{2}{*}{69,576}          & 69,336      & 240      & 0       & 0      & 1.0000                     \\ \cline{2-2} \cline{4-8} 
+                             & Our System              &                                & 69,336     & 240      & 0       & 0      & 1.0000                     \\ \hline
+\multirow{2}{*}{Dataset\_03+Industy\_flow02} & DECANTeR \cite{bortolameotti2017decanter}                & \multirow{2}{*}{69,279}          & 69,109      & 0        & 168      & 2      & 0.9975                    \\ \cline{2-2} \cline{4-8} 
+                             & Our System              &                                & 69,109      & 168      & 0        & 2      & 0.9999                    \\ \hline\hline
 \end{tabular}
 \end{table*}
 
