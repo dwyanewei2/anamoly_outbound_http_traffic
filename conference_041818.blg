@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2017)
+This is BibTeX, Version 0.99d (TeX Live 2018)
 Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: conference_041818.aux
 The style file: IEEEtran.bst
@@ -14,45 +14,45 @@ Database file #1: IEEEtranBST2/IEEEexample.bib
 Warning--empty journal in gu2008botsniffer
 
 Done.
-You've used 13 entries,
+You've used 26 entries,
             4087 wiz_defined-function locations,
-            893 strings with 9817 characters,
-and the built_in function-call counts, 11415 in all, are:
-= -- 875
-> -- 264
-< -- 108
-+ -- 148
-- -- 40
-* -- 546
-:= -- 1592
-add.period$ -- 36
-call.type$ -- 13
-change.case$ -- 13
-chr.to.int$ -- 276
-cite$ -- 14
-duplicate$ -- 786
-empty$ -- 985
-format.name$ -- 52
-if$ -- 2704
+            963 strings with 12174 characters,
+and the built_in function-call counts, 22500 in all, are:
+= -- 1755
+> -- 510
+< -- 212
++ -- 283
+- -- 78
+* -- 1064
+:= -- 3165
+add.period$ -- 68
+call.type$ -- 26
+change.case$ -- 26
+chr.to.int$ -- 525
+cite$ -- 27
+duplicate$ -- 1567
+empty$ -- 1943
+format.name$ -- 102
+if$ -- 5342
 int.to.chr$ -- 0
-int.to.str$ -- 13
-missing$ -- 127
-newline$ -- 62
-num.names$ -- 13
-pop$ -- 320
+int.to.str$ -- 26
+missing$ -- 255
+newline$ -- 101
+num.names$ -- 26
+pop$ -- 628
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 869
+skip$ -- 1742
 stack$ -- 0
-substring$ -- 657
-swap$ -- 647
-text.length$ -- 16
+substring$ -- 1252
+swap$ -- 1288
+text.length$ -- 37
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 13
+type$ -- 26
 warning$ -- 1
-while$ -- 61
-width$ -- 15
-write$ -- 141
+while$ -- 123
+width$ -- 28
+write$ -- 266
 (There was 1 warning)

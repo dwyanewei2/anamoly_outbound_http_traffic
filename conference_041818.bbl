@@ -59,12 +59,54 @@ K.~Borders and A.~Prakash, ``Web tap: detecting covert web traffic,'' in
   \emph{Proceedings of the 11th ACM conference on Computer and communications
   security}.\hskip 1em plus 0.5em minus 0.4em\relax ACM, 2004, pp. 110--120.
 
+\bibitem{feily2009survey}
+M.~Feily, A.~Shahrestani, and S.~Ramadass, ``A survey of botnet and botnet
+  detection,'' in \emph{Emerging Security Information, Systems and
+  Technologies, 2009. SECURWARE'09. Third International Conference on}.\hskip
+  1em plus 0.5em minus 0.4em\relax IEEE, 2009, pp. 268--273.
+
+\bibitem{barford2007inside}
+P.~Barford and V.~Yegneswaran, ``An inside look at botnets,'' in \emph{Malware
+  detection}.\hskip 1em plus 0.5em minus 0.4em\relax Springer, 2007, pp.
+  171--191.
+
+\bibitem{strayer2008botnet}
+W.~T. Strayer, D.~Lapsely, R.~Walsh, and C.~Livadas, ``Botnet detection based
+  on network behavior,'' in \emph{Botnet Detection}.\hskip 1em plus 0.5em minus
+  0.4em\relax Springer, 2008, pp. 1--24.
+
+\bibitem{atluri2017botnets}
+A.~C. Atluri and V.~Tran, ``Botnets threat analysis and detection,'' in
+  \emph{Information Security Practices}.\hskip 1em plus 0.5em minus 0.4em\relax
+  Springer, 2017, pp. 7--28.
+
 \bibitem{p:zarras14}
 A.~Zarras, A.~Papadogiannakis, R.~Gawlik, and T.~Holz, ``Automated generation
   of models for fast and precise detection of http-based malware,'' in
   \emph{Privacy, Security and Trust (PST), 2014 Twelfth Annual International
   Conference on}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2014, pp.
   249--256.
+
+\bibitem{nelms2013execscent}
+T.~Nelms, R.~Perdisci, and M.~Ahamad, ``Execscent: Mining for new c\&c domains
+  in live networks with adaptive control protocol templates.'' in \emph{USENIX
+  Security Symposium}, 2013, pp. 589--604.
+
+\bibitem{perdisci2013scalable}
+R.~Perdisci, D.~Ariu, and G.~Giacinto, ``Scalable fine-grained behavioral
+  clustering of http-based malware,'' \emph{Computer Networks}, vol.~57, no.~2,
+  pp. 487--500, 2013.
+
+\bibitem{perdisci2010behavioral}
+R.~Perdisci, W.~Lee, and N.~Feamster, ``Behavioral clustering of http-based
+  malware and signature generation using malicious network traces.'' in
+  \emph{NSDI}, vol.~10, 2010, p.~14.
+
+\bibitem{rafique2013firma}
+M.~Z. Rafique and J.~Caballero, ``Firma: Malware clustering and network
+  signature generation with mixed network behaviors,'' in \emph{International
+  Workshop on Recent Advances in Intrusion Detection}.\hskip 1em plus 0.5em
+  minus 0.4em\relax Springer, 2013, pp. 144--163.
 
 \bibitem{p:feinstein03}
 L.~Feinstein, D.~Schnackenberg, R.~Balupari, and D.~Kindred, ``Statistical
@@ -88,10 +130,37 @@ H.~Zhang, D.~D. Yao, N.~Ramakrishnan, and Z.~Zhang, ``Causality reasoning about
   network events for detecting stealthy malware activities,'' \emph{computers
   \& security}, vol.~58, pp. 180--198, 2016.
 
+\bibitem{bilge2012disclosure}
+L.~Bilge, D.~Balzarotti, W.~Robertson, E.~Kirda, and C.~Kruegel, ``Disclosure:
+  detecting botnet command and control servers through large-scale netflow
+  analysis,'' in \emph{Proceedings of the 28th Annual Computer Security
+  Applications Conference}.\hskip 1em plus 0.5em minus 0.4em\relax ACM, 2012,
+  pp. 129--138.
+
+\bibitem{gu2008botminer}
+G.~Gu, R.~Perdisci, J.~Zhang, W.~Lee \emph{et~al.}, ``Botminer: Clustering
+  analysis of network traffic for protocol-and structure-independent botnet
+  detection.'' in \emph{USENIX security symposium}, vol.~5, no.~2, 2008, pp.
+  139--154.
+
+\bibitem{binkley2006algorithm}
+J.~R. Binkley and S.~Singh, ``An algorithm for anomaly-based botnet
+  detection.'' \emph{SRUTI}, vol.~6, pp. 7--7, 2006.
+
 \bibitem{p:schwenk11}
 G.~Schwenk and K.~Rieck, ``Adaptive detection of covert communication in http
   requests,'' in \emph{Computer Network Defense (EC2ND), 2011 Seventh European
   Conference on}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2011, pp.
   25--32.
+
+\bibitem{kheir2013behavioral}
+N.~Kheir, ``Behavioral classification and detection of malware through http
+  user agent anomalies,'' \emph{Journal of Information Security and
+  Applications}, vol.~18, no.~1, pp. 2--13, 2013.
+
+\bibitem{bartos2016optimized}
+K.~Bartos, M.~Sofka, and V.~Franc, ``Optimized invariant representation of
+  network traffic for detecting unseen malware variants.'' in \emph{USENIX
+  Security Symposium}, 2016, pp. 807--822.
 
 \end{thebibliography}
