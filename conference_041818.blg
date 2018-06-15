@@ -14,45 +14,45 @@ Database file #1: IEEEtranBST2/IEEEexample.bib
 Warning--empty journal in gu2008botsniffer
 
 Done.
-You've used 26 entries,
+You've used 31 entries,
             4087 wiz_defined-function locations,
-            963 strings with 12174 characters,
-and the built_in function-call counts, 22500 in all, are:
-= -- 1755
-> -- 510
-< -- 212
-+ -- 283
-- -- 78
-* -- 1064
-:= -- 3165
-add.period$ -- 68
-call.type$ -- 26
-change.case$ -- 26
-chr.to.int$ -- 525
-cite$ -- 27
-duplicate$ -- 1567
-empty$ -- 1943
-format.name$ -- 102
-if$ -- 5342
+            987 strings with 13176 characters,
+and the built_in function-call counts, 26299 in all, are:
+= -- 2056
+> -- 605
+< -- 239
++ -- 333
+- -- 96
+* -- 1241
+:= -- 3721
+add.period$ -- 80
+call.type$ -- 31
+change.case$ -- 31
+chr.to.int$ -- 585
+cite$ -- 32
+duplicate$ -- 1852
+empty$ -- 2273
+format.name$ -- 125
+if$ -- 6243
 int.to.chr$ -- 0
-int.to.str$ -- 26
-missing$ -- 255
-newline$ -- 101
-num.names$ -- 26
-pop$ -- 628
+int.to.str$ -- 31
+missing$ -- 306
+newline$ -- 116
+num.names$ -- 31
+pop$ -- 751
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 1742
+skip$ -- 2038
 stack$ -- 0
-substring$ -- 1252
-swap$ -- 1288
-text.length$ -- 37
+substring$ -- 1405
+swap$ -- 1507
+text.length$ -- 44
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 26
+type$ -- 31
 warning$ -- 1
-while$ -- 123
-width$ -- 28
-write$ -- 266
+while$ -- 141
+width$ -- 33
+write$ -- 313
 (There was 1 warning)

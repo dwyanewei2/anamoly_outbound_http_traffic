@@ -80,6 +80,17 @@ A.~C. Atluri and V.~Tran, ``Botnets threat analysis and detection,'' in
   \emph{Information Security Practices}.\hskip 1em plus 0.5em minus 0.4em\relax
   Springer, 2017, pp. 7--28.
 
+\bibitem{carl2006using}
+L.~Carl \emph{et~al.}, ``Using machine learning technliques to identify botnet
+  traffic,'' in \emph{Local Computer Networks, Proceedings 2006 31st IEEE
+  Conference on. IEEE}, 2006.
+
+\bibitem{strayer2006detecting}
+W.~T. Strayer, R.~Walsh, C.~Livadas, and D.~Lapsley, ``Detecting botnets with
+  tight command and control,'' in \emph{Local Computer Networks, Proceedings
+  2006 31st IEEE Conference on}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE,
+  2006, pp. 195--202.
+
 \bibitem{p:zarras14}
 A.~Zarras, A.~Papadogiannakis, R.~Gawlik, and T.~Holz, ``Automated generation
   of models for fast and precise detection of http-based malware,'' in
@@ -147,11 +158,27 @@ G.~Gu, R.~Perdisci, J.~Zhang, W.~Lee \emph{et~al.}, ``Botminer: Clustering
 J.~R. Binkley and S.~Singh, ``An algorithm for anomaly-based botnet
   detection.'' \emph{SRUTI}, vol.~6, pp. 7--7, 2006.
 
+\bibitem{karasaridis2007wide}
+A.~Karasaridis, B.~Rexroad, D.~A. Hoeflin \emph{et~al.}, ``Wide-scale botnet
+  detection and characterization.'' \emph{HotBots}, vol.~7, pp. 7--7, 2007.
+
 \bibitem{p:schwenk11}
 G.~Schwenk and K.~Rieck, ``Adaptive detection of covert communication in http
   requests,'' in \emph{Computer Network Defense (EC2ND), 2011 Seventh European
   Conference on}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2011, pp.
   25--32.
+
+\bibitem{wang2018botcapturer}
+W.~Wang, Y.~Wang, X.~Tan, Y.~Liu, and S.~Yang, ``Botcapturer: Detecting botnets
+  based on two-layered analysis with graph anomaly detection and network
+  traffic clustering,'' \emph{International Journal of Performability
+  Engineering}, vol.~14, no.~5, p. 1050, 2018.
+
+\bibitem{eslahi2013efficient}
+M.~Eslahi, H.~Hashim, and N.~Tahir, ``An efficient false alarm reduction
+  approach in http-based botnet detection,'' in \emph{Computers \& Informatics
+  (ISCI), 2013 IEEE Symposium on}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE,
+  2013, pp. 201--205.
 
 \bibitem{kheir2013behavioral}
 N.~Kheir, ``Behavioral classification and detection of malware through http
