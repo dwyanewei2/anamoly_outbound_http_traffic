@@ -15,7 +15,8 @@ Before going further, all PCAP files collected by an enterprise's host is networ
 
 \subsection{Browser Traffic Extractor}
 
-For most cases of client-side attacking, hackers whose general goal is to steal valuable data before malware connects to C\&C server. As a result, PCAP files, that contain specific network characteristics of an application (e.g., browser) for each host in the enterprise. 
+For most cases of client-side attacking, hackers whose general goal is to steal valuable data before malware connects to C\&C server. As a result, PCAP files, that contain specific network characteristics of an application (e.g., browser) for each host in the enterprise. To generate fingerprint for each browser, our approach first extracts various entities from PCAP files. Table~\ref{tbl:log_01} shows 4 heterogeneous fields which can be extracted from each one-line log, including domain ({\em Domain}), user-agent ({\em User-agent}), accept language ({\em Accept-Lang}), and referrer ({\em Referrer}). The reason for choosing these 4 fields for browser traffic classification can be summarized as followings and fingerprint construction is represented in next subsection. 
+
 
 %To generate fingerprint for each browser, our approach first extracts various entities from PCAP files. Table~\ref{tbl:log_01} shows 6 heterogeneous fields which can be extracted from each one-line log, including domain ({\em Domain}), destination IP ({\em DstIP}), user-agent ({\em User-agent}), accept language ({\em Accept-Lang}), length ({\em Len}), and constant field ({\em Constant}). The reason for choosing these 6 fields for browser traffic classification can be summarized as followings and fingerprint construction is represented in next subsection. 
 
@@ -34,8 +35,6 @@ For most cases of client-side attacking, hackers whose general goal is to steal 
 %{\em Constant}          & If-Modified-Since, Cookie, Connection, ...       \\\hline\hline
 %\end{tabular}
 %\end{table}
-
-To generate fingerprint for each browser, our approach first extracts various entities from PCAP files. Table~\ref{tbl:log_01} shows 4 heterogeneous fields which can be extracted from each one-line log, including domain ({\em Domain}), user-agent ({\em User-agent}), accept language ({\em Accept-Lang}), and referrer ({\em Referrer}). The reason for choosing these 4 fields for browser traffic classification can be summarized as followings and fingerprint construction is represented in next subsection. 
 
 \begin{table}[]
 \centering
